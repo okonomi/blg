@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe PostPolicy, type: :policy do
-  let(:user) { nil }
+  let(:user) { User.new }
   let(:post) { Post.new }
 
   subject { described_class }
