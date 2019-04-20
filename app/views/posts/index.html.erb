@@ -1,6 +1,8 @@
 <h1>Posts</h1>
 
+<% if policy(Post.new).new? %>
 <%= link_to 'New Post', new_post_path %>
+<% end %>
 
 <ul>
 <% @posts.each do |post| %>
