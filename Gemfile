@@ -30,11 +30,16 @@ gem 'bootsnap', '>= 1.4.1', require: false
 
 gem 'pundit'
 
+gem 'omniauth'
+gem 'omniauth-github'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem 'rspec-rails'
+
+  gem 'dotenv-rails', require: 'dotenv/rails-now'
 end
 
 group :development do
