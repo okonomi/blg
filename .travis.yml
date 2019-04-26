@@ -7,7 +7,9 @@ before_install:
 
 bundler_args: --without production
 
-cache: bundler
+cache:
+  - bundler
+  - yarn
 
 env:
   global:
