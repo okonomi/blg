@@ -1,0 +1,23 @@
+language: ruby
+
+env:
+  global:
+    - DISABLE_SPRING=1
+    - GITHUB_OAUTH_CLIENT_KEY=xxx
+    - GITHUB_OAUTH_CLIENT_SECRET=xxx
+
+bundler_args: --without production
+
+cache:
+  bundler: true
+  directories:
+    - node_modules
+  yarn: true
+
+before_install:
+  - gem update --system
+  - gem install bundler
+  - yarn
+
+script:
+  - bin/rspec
