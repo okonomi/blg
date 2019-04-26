@@ -15,3 +15,4 @@ env:
 
 script:
   - bin/rspec spec/models
+  - bin/rspec spec/policies
