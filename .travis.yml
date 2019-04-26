@@ -6,6 +6,8 @@ before_install:
 
 bundler_args: --without production
 
+cache: bundler
+
 env:
   global:
     - GITHUB_OAUTH_CLIENT_KEY=xxx
