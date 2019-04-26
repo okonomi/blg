@@ -10,3 +10,6 @@ env:
   global:
     - GITHUB_OAUTH_CLIENT_KEY=xxx
     - GITHUB_OAUTH_CLIENT_SECRET=xxx
+
+script:
+  - bin/rspec spec/models
