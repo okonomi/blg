@@ -3,6 +3,7 @@ language: ruby
 before_install:
   - gem update --system
   - gem install bundler
+  - yarn
 
 bundler_args: --without production
 
@@ -13,8 +14,10 @@ env:
     - GITHUB_OAUTH_CLIENT_KEY=xxx
     - GITHUB_OAUTH_CLIENT_SECRET=xxx
 
-script:
+before_script:
   - bin/rails webpacker:compile
+
+script:
   - bin/rspec spec/models
   - bin/rspec spec/policies
   - bin/rspec spec/system
