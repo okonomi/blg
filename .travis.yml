@@ -18,9 +18,6 @@ env:
     - GITHUB_OAUTH_CLIENT_KEY=xxx
     - GITHUB_OAUTH_CLIENT_SECRET=xxx
 
-before_script:
-  - bin/rails webpacker:compile
-
 script:
   - bin/rspec spec/models
   - bin/rspec spec/policies
