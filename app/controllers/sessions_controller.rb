@@ -4,6 +4,11 @@ class SessionsController < ApplicationController
     redirect_to root_or_origin_url, flash: { success: t('flash.logged_in') }
   end
 
+  def destroy
+    reset_session
+    redirect_to root_path, flash: { success: t('flash.logged_out') }
+  end
+
   private
 
   def user
