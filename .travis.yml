@@ -19,6 +19,4 @@ env:
     - GITHUB_OAUTH_CLIENT_SECRET=xxx
 
 script:
-  - bin/rspec spec/models
-  - bin/rspec spec/policies
-  - bin/rspec spec/system
+  - bin/rspec
