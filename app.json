@@ -6,6 +6,14 @@
 
   ],
   "env": {
+    "GITHUB_OAUTH_CLIENT_KEY": {
+      "description": "GitHub OAuth Client Key",
+      "required": true
+    },
+    "GITHUB_OAUTH_CLIENT_SECRET": {
+      "description": "GitHub OAuth Client Secret",
+      "required": true
+    }
   },
   "formation": {
   },
