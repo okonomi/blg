@@ -23,5 +23,8 @@ before_install:
   - gem install bundler
   - yarn
 
+before_script:
+  - bin/setup
+
 script:
   - bin/rspec
