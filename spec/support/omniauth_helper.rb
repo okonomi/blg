@@ -4,6 +4,7 @@ module OmniAuthHelper
       provider: 'github',
       uid: user.uid,
       info: {
+        name: ENV['GITHUB_USER'],
         nickname: user.nickname,
         image: user.image_url
       }

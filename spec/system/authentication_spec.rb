@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Authentication', type: :system do
-  let(:user) { User.new }
+  let(:user) { build(:user) }
 
   it 'login' do
     authenticate_as(user)

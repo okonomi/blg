@@ -64,7 +64,8 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
-  include OmniAuthHelper
+  config.include FactoryBot::Syntax::Methods
+  config.include OmniAuthHelper
 
   config.before do |example|
     if example.metadata[:type] == :system

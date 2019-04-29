@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe PostPolicy, type: :policy do
-  let(:post) { Post.new }
+  let(:post) { build(:post) }
 
   subject { described_class }
 
   permissions :new? do
     context 'logged in user' do
-      let(:user) { User.new }
+      let(:user) { build(:user) }
       it { is_expected.to permit(user, post) }
     end
     context 'anonymous user' do
@@ -18,7 +18,7 @@ RSpec.describe PostPolicy, type: :policy do
 
   permissions :edit? do
     context 'logged in user' do
-      let(:user) { User.new }
+      let(:user) { build(:user) }
       it { is_expected.to permit(user, post) }
     end
     context 'anonymous user' do
@@ -29,7 +29,7 @@ RSpec.describe PostPolicy, type: :policy do
 
   permissions :destroy? do
     context 'logged in user' do
-      let(:user) { User.new }
+      let(:user) { build(:user) }
       it { is_expected.to permit(user, post) }
     end
     context 'anonymous user' do

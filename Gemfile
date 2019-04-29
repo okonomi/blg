@@ -44,6 +44,8 @@ group :development, :test do
   gem 'rspec-rails'
 
   gem 'dotenv-rails', require: 'dotenv/rails-now'
+
+  gem 'factory_bot_rails'
 end
 
 group :development do

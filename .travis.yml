@@ -5,6 +5,7 @@ env:
     - DISABLE_SPRING=1
     - GITHUB_OAUTH_CLIENT_KEY=xxx
     - GITHUB_OAUTH_CLIENT_SECRET=xxx
+    - GITHUB_USER=github_user
 
 bundler_args: --without production
 
