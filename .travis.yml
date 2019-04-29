@@ -7,6 +7,9 @@ env:
     - GITHUB_OAUTH_CLIENT_SECRET=xxx
     - GITHUB_USER=github_user
 
+services:
+  - postgresql
+
 bundler_args: --without production
 
 cache:
