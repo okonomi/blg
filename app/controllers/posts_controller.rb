@@ -1,15 +1,17 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  after_action :verify_authorized
 
   def index
-    @posts = Post.all
+    @posts = authorize Post.all
   end
 
   def new
-    @post = Post.new
+    @post = authorize Post.new
   end
 
   def create
+    authorize Post
     Post.create(post_params)
   end
 
@@ -30,7 +32,7 @@ class PostsController < ApplicationController
   private
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = authorize Post.find(params[:id])
   end
 
   def post_params

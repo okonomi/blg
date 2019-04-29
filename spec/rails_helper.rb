@@ -8,6 +8,10 @@ require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'pundit/rspec'
 
+Dir[Rails.root.join('spec/support/**/*.rb')].each {|f| require f }
+
+OmniAuth.config.test_mode = true
+
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -60,7 +64,15 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
-  config.before(:each, type: :system) do
-    driven_by :rack_test
+  include OmniAuthHelper
+
+  config.before do |example|
+    if example.metadata[:type] == :system
+      if example.metadata[:js]
+        driven_by :selenium, using: :headless_chrome
+      else
+        driven_by :rack_test
+      end
+    end
   end
 end
