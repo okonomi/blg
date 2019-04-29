@@ -5,12 +5,12 @@ RSpec.describe 'Authentication', type: :system do
 
   it 'login' do
     authenticate_as(user)
-    expect(page).to have_content 'flash.logged_in'
+    expect(page).to have_content I18n.t('flash.logged_in')
   end
 
   it 'logout' do
     authenticate_as(user)
     click_link 'Logout'
-    expect(page).to have_content 'flash.logged_out'
+    expect(page).to have_content I18n.t('flash.logged_out')
   end
 end
