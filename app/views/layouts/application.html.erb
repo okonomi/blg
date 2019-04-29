@@ -10,9 +10,7 @@
   </head>
 
   <body>
-    <% if flash[:success] %>
-      <p><%= flash[:success] %></p>
-    <% end %>
+    <%= render 'flash' %>
 
     <% if logged_in? %>
       <%= link_to 'Logout', logout_path, method: :delete %>

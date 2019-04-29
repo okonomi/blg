@@ -12,7 +12,10 @@ class PostsController < ApplicationController
 
   def create
     authorize Post
-    Post.create(post_params)
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to @post, notice: t('flash.post_created')
+    end
   end
 
   def show
@@ -22,11 +25,15 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post.update(post_params)
+    if @post.update(post_params)
+      redirect_to @post, notice: t('flash.post_updated')
+    end
   end
 
   def destroy
-    @post.delete
+    if @post.delete
+      redirect_to root_path, notice: t('flash.post_destroyed')
+    end
   end
 
   private
