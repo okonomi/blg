@@ -1,7 +1,7 @@
 <h1><%= @post.title %></h1>
 
 <div>
-  <%= @post.content %>
+  <%= simple_format(@post.content) %>
 </div>
 
 <% if policy(@post).edit? && policy(@post).destroy? %>
