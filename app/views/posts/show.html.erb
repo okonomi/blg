@@ -4,7 +4,9 @@
   <%= @post.content %>
 </div>
 
+<% if policy(@post).edit? && policy(@post).destroy? %>
 <ul>
   <li><%= link_to 'Edit', edit_post_path(@post) %></li>
   <li><%= button_to 'Delete', post_path(@post), method: :delete %></li>
 </ul>
+<% end %>
