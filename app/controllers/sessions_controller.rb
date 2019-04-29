@@ -12,6 +12,8 @@ class SessionsController < ApplicationController
   private
 
   def user
+    throw ActionController::MethodNotAllowed if auth.dig(:info, :name) != ENV.fetch('GITHUB_USER')
+
     @user ||= User.find_or_initialize_by(uid: auth.dig(:uid)).tap do |u|
       u.nickname  = auth.dig(:info, :nickname)
       u.image_url = auth.dig(:info, :image)
