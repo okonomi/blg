@@ -265,7 +265,7 @@ GEM
     xpath (3.2.0)
       nokogiri (~> 1.8)
     yard (0.9.19)
-    zeitwerk (2.1.5)
+    zeitwerk (2.1.6)
 
 PLATFORMS
   ruby
