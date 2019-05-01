@@ -1,32 +1,31 @@
 <% @posts.each do |post| %>
   <section class="section">
     <div class="container">
-      <div class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <h2 class="title is-2">
+      <div class="columns is-mobile is-vcentered">
+        <div class="column">
+          <div>
+            <p class="heading"><%= post.posted_date %></p>
+            <p class="title">
               <%= link_to post_path(post) do %>
                 <%= post.title %>
-              <% end %>
-            </h2>
-          </div>
-        </div>
-        <div class="level-right">
-          <div class="level-item">
-            <p class="subtitle is-6">
-              <% if policy(post).edit? %>
-                <%= link_to edit_post_path(post) do %>
-                <span class="icon has-text-info">
-                  <i class="fas fa-edit"></i>
-                </span>
-                <% end %>
               <% end %>
             </p>
           </div>
         </div>
+        <div class="column is-1 has-text-centered">
+          <% if policy(post).edit? %>
+            <%= link_to edit_post_path(post) do %>
+              <span class="icon has-text-info">
+                <i class="fas fa-edit"></i>
+              </span>
+            <% end %>
+          <% end %>
+        </div>
       </div>
 
-      <%= simple_format(post.content) %>
+      <div class="content">
+        <%= simple_format(post.content) %>
+      </div>
     </div>
   </section>
 <% end %>
