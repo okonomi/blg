@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   after_action :verify_authorized
 
   def index
-    @posts = authorize Post.all
+    @posts = authorize Post.latest
   end
 
   def new
