@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blg</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= render 'flash' %>
 
-    <% if logged_in? %>
-      <%= link_to 'Logout', logout_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Login', login_path %>
-    <% end %>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <%= link_to root_path, class: 'navbar-item' do %>
+          Blg
+        <% end %>
+      </div>
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <%= link_to 'New Post', new_post_path, class: 'button' if policy(Post).new? && !current_page?(new_post_path) %>
+              <%= link_to 'Logout', logout_path, method: :delete, class: 'button is-primary' if logged_in? %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
     <%= yield %>
   </body>
 </html>

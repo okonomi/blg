@@ -1,3 +1,15 @@
-<h1>Edit post</h1>
+<section class="section">
+  <div class="container">
+    <div class="level">
+      <div class="level-left">
+      </div>
+      <div class="level-right">
+        <div class="level-item">
+          <%= link_to 'Delete', post_path(@post), method: :delete, class: 'button is-danger' if policy(@post).destroy? %>
+        </div>
+      </div>
+    </div>
 
-<%= render 'form', post: @post %>
+    <%= render 'form', post: @post %>
+  </div>
+</section>

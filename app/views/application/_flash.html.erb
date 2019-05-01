@@ -1,3 +1,6 @@
 <% flash.each do |type, message| %>
-  <p><%= message %></p>
+  <div class="notification is-<%= type %>">
+    <button class="delete"></button>
+    <p><%= message %></p>
+  </div>
 <% end %>
