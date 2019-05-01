@@ -1,13 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe 'Posts', type: :system do
+RSpec.describe 'Posts', type: :system, js: true do
   context 'with logged in user' do
     before do
       user = build(:user)
       authenticate_as(user)
     end
 
-    it 'can create new post' do
+    xit 'can create new post' do
       visit new_post_path
 
       fill_in 'Title', with: 'test title'
@@ -18,7 +18,7 @@ RSpec.describe 'Posts', type: :system do
       expect(page).to have_content 'test content'
     end
 
-    it 'can update post' do
+    xit 'can update post' do
       post = Post.create!(title: 'test', content: 'test')
       visit edit_post_path(post)
 
