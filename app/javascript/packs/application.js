@@ -18,3 +18,6 @@ require("channels")
 
 import 'bulma/css/bulma'
 import '@fortawesome/fontawesome-free/css/all.css'
+
+require("trix")
+require("@rails/actiontext")
