@@ -6,13 +6,11 @@
           <div>
             <p class="heading"><%= post.published_date %></p>
             <p class="title">
-              <%= link_to post_path(post) do %>
-                <%= post.title %>
-              <% end %>
+              <%= link_to post.title, post_path(post) %>
             </p>
           </div>
         </div>
-        <div class="column is-1 has-text-centered">
+        <div class="column is-1 has-text-right">
           <% if policy(post).edit? %>
             <%= link_to edit_post_path(post) do %>
               <span class="icon has-text-info">
@@ -25,6 +23,14 @@
 
       <div class="content">
         <%= post.content %>
+
+        <p class="has-text-right">
+          <%= link_to post_path(post) do %>
+            <span class="icon has-text-info">
+              <i class="fas fa-link"></i>
+            </span>
+          <% end %>
+        </p>
       </div>
     </div>
   </section>
