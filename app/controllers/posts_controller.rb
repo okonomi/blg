@@ -4,6 +4,11 @@ class PostsController < ApplicationController
 
   def index
     @posts = authorize Post.latest
+
+    respond_to do |format|
+      format.html
+      format.atom
+    end
   end
 
   def new
