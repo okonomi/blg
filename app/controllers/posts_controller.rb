@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   private
 
   def set_post
-    @post = authorize Post.find(params[:id])
+    @post = authorize Post.find_by(uid: params[:uid])
   end
 
   def post_params
