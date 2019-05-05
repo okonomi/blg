@@ -1,6 +1,9 @@
 {
+  "name": "Blg",
+  "description": "\"Blg\" is tiny blog made with Rails.",
+  "repository": "https://github.com/okonomi/blg",
   "addons": [
-
+    "heroku-postgresql"
   ],
   "buildpacks": [
 
@@ -13,11 +16,14 @@
     "GITHUB_OAUTH_CLIENT_SECRET": {
       "description": "GitHub OAuth Client Secret",
       "required": true
+    },
+    "GITHUB_USER": {
+      "description": "Allow login Github user ID",
+      "required": true
     }
   },
   "formation": {
   },
-  "name": "blg",
   "scripts": {
   },
   "stack": "heroku-18"
