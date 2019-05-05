@@ -16,6 +16,10 @@
     "GITHUB_OAUTH_CLIENT_SECRET": {
       "description": "GitHub OAuth Client Secret",
       "required": true
+    },
+    "GITHUB_USER": {
+      "description": "Allow login Github user ID",
+      "required": true
     }
   },
   "formation": {
