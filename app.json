@@ -3,7 +3,7 @@
   "description": "\"Blg\" is tiny blog made with Rails.",
   "repository": "https://github.com/okonomi/blg",
   "addons": [
-
+    "heroku-postgresql"
   ],
   "buildpacks": [
 
