@@ -5,8 +5,6 @@ update_configs:
   - package_manager: "ruby:bundler"
     directory: "/"
     update_schedule: "daily"
-
-
-allowed_updates:
-  - match:
-    
+    allowed_updates:
+      - match:
+          update_type: "all"
