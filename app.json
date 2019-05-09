@@ -20,6 +20,12 @@
     "GITHUB_USER": {
       "description": "Allow login Github user ID",
       "required": true
+    },
+    "TWITTER_ID": {
+      "description": "Own Twitter ID"
+    },
+    "GITHUB_ID": {
+      "description": "Own Github ID"
     }
   },
   "formation": {
