@@ -1,5 +1,5 @@
 atom_feed do |feed|
-  feed.title('Blg')
+  feed.title(ENV.fetch('BLOG_TITLE'))
   feed.updated(@posts.first.updated_at) if @posts.length > 0
 
   @posts.each do |post|

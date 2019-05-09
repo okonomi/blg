@@ -1,7 +1,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <%= link_to root_path, class: 'navbar-item' do %>
-      Blg
+      <%= ENV.fetch('BLOG_TITLE') %>
     <% end %>
   </div>
 

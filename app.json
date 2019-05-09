@@ -9,6 +9,10 @@
 
   ],
   "env": {
+    "BLOG_TITLE": {
+      "description": "Blog title",
+      "required": true
+    },
     "GITHUB_OAUTH_CLIENT_KEY": {
       "description": "GitHub OAuth Client Key",
       "required": true
