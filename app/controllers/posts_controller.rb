@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   after_action :verify_authorized
 
   def index
-    @posts = authorize Post.latest
+    @posts = authorize Post.includes(:tags).latest
 
     respond_to do |format|
       format.html
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   private
 
   def set_post
-    @post = authorize Post.find_by(uid: params[:uid])
+    @post = authorize Post.includes(:tags).find_by(uid: params[:uid])
   end
 
   def post_params

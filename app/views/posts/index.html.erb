@@ -8,6 +8,11 @@
             <p class="title">
               <%= link_to post.title, post_path(post) %>
             </p>
+            <p class="subtitle">
+              <% post.tags.each do |tag| %>
+                <span class="tag"><%= tag.name %></span>
+              <% end %>
+            </p>
           </div>
         </div>
         <div class="column is-1 has-text-right">
