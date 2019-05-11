@@ -11,9 +11,9 @@ RSpec.describe PostDecorator do
       it { is_expected.to eq '' }
     end
 
-    context 'when published_at is "2019-01-01"' do
-      let(:published_at) { '2019-01-01' }
-      it { is_expected.to eq '2019-01-01' }
+    context 'when published_at is "2019-01-01 23:59:59"' do
+      let(:published_at) { '2019-01-01 23:59:59' }
+      it { is_expected.to eq '2019-01-01 23:59' }
     end
   end
 end

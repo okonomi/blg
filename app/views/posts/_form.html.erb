@@ -1,7 +1,7 @@
 <%= form_with model: post do |f| %>
   <div class="field">
     <div class="control">
-      <%= f.date_field :published_at, class: 'input' %>
+      <%= f.datetime_local_field :published_at, class: 'input' %>
     </div>
   </div>
   <div class="field">

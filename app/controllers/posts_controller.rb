@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = authorize Post.new
+    @post = authorize Post.new(published_at: Time.current)
   end
 
   def create
