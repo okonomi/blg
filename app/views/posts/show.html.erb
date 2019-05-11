@@ -9,7 +9,9 @@
           </p>
           <p class="subtitle">
             <% @post.tags.each do |tag| %>
-              <span class="tag"><%= tag.name %></span>
+              <%= link_to tag_path(tag) do %>
+                <span class="tag"><%= tag.name %></span>
+              <% end %>
             <% end %>
           </p>
         </div>
