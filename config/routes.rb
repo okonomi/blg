@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get '/auth/github/callback' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
 
+  namespace :posts do
+    resources :drafts, only: :index
+  end
   resources :posts, param: :uid
   get '/feed', to: 'posts#index', defaults: { format: :atom }
   resources :tags, only: :show

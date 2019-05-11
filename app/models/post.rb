@@ -8,6 +8,11 @@ class Post < ApplicationRecord
 
   has_rich_text :content
 
+  enum status: {
+    draft: 0,
+    published: 1
+  }
+
   def to_param
     uid
   end
