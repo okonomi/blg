@@ -1,16 +1,16 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe 'Authentication', type: :system do
+RSpec.describe "Authentication", type: :system do
   let(:user) { build(:user) }
 
-  it 'login' do
+  it "login" do
     authenticate_as(user)
-    expect(page).to have_content I18n.t('flash.logged_in')
+    expect(page).to have_content I18n.t("flash.logged_in")
   end
 
-  it 'logout' do
+  it "logout" do
     authenticate_as(user)
-    click_link 'Logout'
-    expect(page).to have_content I18n.t('flash.logged_out')
+    click_link "Logout"
+    expect(page).to have_content I18n.t("flash.logged_out")
   end
 end

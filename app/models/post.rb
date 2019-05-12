@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  has_many :post_tags
+  has_many :post_tags, dependent: :destroy
   has_many :tags, through: :post_tags
 
   before_create :set_uid
@@ -10,7 +10,7 @@ class Post < ApplicationRecord
 
   enum status: {
     draft: 0,
-    published: 1
+    published: 1,
   }
 
   def to_param
@@ -19,11 +19,11 @@ class Post < ApplicationRecord
 
   private
 
-  def set_uid
-    self.uid = generate_uid
-  end
+    def set_uid
+      self.uid = generate_uid
+    end
 
-  def generate_uid
-    SecureRandom.hex(20)
-  end
+    def generate_uid
+      SecureRandom.hex(20)
+    end
 end
