@@ -16,5 +16,7 @@ module Blg
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.time_zone = ENV["TZ"]
+
+    config.action_view.prefix_partial_path_with_controller_namespace = false
   end
 end
