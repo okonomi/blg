@@ -69,6 +69,8 @@ group :development do
 
   gem "flamegraph"
   gem "stackprof"
+
+  gem "bullet"
 end
 
 group :test do
