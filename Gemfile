@@ -64,6 +64,11 @@ group :development do
   gem "spring-watcher-listen", "~> 2.0.0"
 
   gem "heavens_door"
+
+  gem "rack-mini-profiler", require: false
+
+  gem "flamegraph"
+  gem "stackprof"
 end
 
 group :test do
