@@ -3,6 +3,7 @@ inherit_gem:
     - "config/rubocop.yml"
     - "config/rails.yml"
     - "config/rspec.yml"
+    - "config/performance.yml"
 
 inherit_mode:
   merge:

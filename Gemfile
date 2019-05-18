@@ -37,9 +37,7 @@ gem "active_decorator"
 
 gem "newrelic_rpm"
 
-gem "rubocop", "< 0.68.0", require: false
-
-gem "onkcop", require: false
+gem "onkcop", require: false, github: "okonomi/onkcop"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
