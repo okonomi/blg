@@ -2,12 +2,8 @@
   "name": "Blg",
   "description": "\"Blg\" is tiny blog made with Rails.",
   "repository": "https://github.com/okonomi/blg",
-  "addons": [
-    "heroku-postgresql"
-  ],
-  "buildpacks": [
-
-  ],
+  "addons": ["heroku-postgresql"],
+  "buildpacks": [],
   "env": {
     "BLOG_TITLE": {
       "description": "Blog title",
@@ -32,9 +28,7 @@
       "description": "Own Github ID"
     }
   },
-  "formation": {
-  },
-  "scripts": {
-  },
-  "stack": "heroku-18"
+  "formation": {},
+  "scripts": {},
+  "stack": "container"
 }
