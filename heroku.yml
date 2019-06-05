@@ -1,6 +1,9 @@
 build:
   docker:
     web: Dockerfile.production
+  config:
+    GITHUB_OAUTH_CLIENT_KEY:
+    GITHUB_OAUTH_CLIENT_SECRET:
 release:
   image: web
   command:
