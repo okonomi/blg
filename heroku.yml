@@ -2,6 +2,8 @@ build:
   docker:
     web: Dockerfile.production
 release:
-  web: db:prepare
+  image: web
+  command:
+    - db:prepare
 run:
   web: server
