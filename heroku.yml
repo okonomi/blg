@@ -6,4 +6,4 @@ build:
     GITHUB_OAUTH_CLIENT_SECRET: xxx
     SECRET_KEY_BASE: xxx
 run:
-  web: bin/rails s
+  web: bin/rails server -p $PORT -e $RAILS_ENV
