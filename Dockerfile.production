@@ -33,6 +33,9 @@ COPY app/assets app/assets
 COPY app/javascript app/javascript
 RUN apk add --update --no-cache tzdata
 
+ARG GITHUB_OAUTH_CLIENT_KEY
+ARG GITHUB_OAUTH_CLIENT_SECRET
+ARG SECRET_KEY_BASE
 RUN bin/rails assets:precompile
 
 
