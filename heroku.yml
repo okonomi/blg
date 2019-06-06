@@ -1,5 +1,13 @@
 build:
   docker:
     web: Dockerfile.production
+  config:
+    GITHUB_OAUTH_CLIENT_KEY: xxx
+    GITHUB_OAUTH_CLIENT_SECRET: xxx
+    SECRET_KEY_BASE: xxx
+release:
+  image: web
+  command:
+    - bin/rails db:prepare
 run:
-  web: server
+  web: bin/rails server -p $PORT

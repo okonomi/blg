@@ -1,0 +1,10 @@
+.dependabot
+.git
+spec
+test
+.env.example
+.gitignore
+.rspec
+.rubocop.yml
+.travis.yml
+docker-compose.yml
