@@ -48,7 +48,7 @@ ENV RAILS_SERVE_STATIC_FILES 1
 WORKDIR /app
 
 RUN apk add --update --no-cache \
-    sqlite-libs \
+    postgresql-libs \
     tzdata
 
 COPY --from=builder /usr/local/bundle /usr/local/bundle
