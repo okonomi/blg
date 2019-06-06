@@ -26,6 +26,9 @@
     },
     "GITHUB_ID": {
       "description": "Own Github ID"
+    },
+    "SECRET_KEY_BASE": {
+      "description": "for Rails config value"
     }
   },
   "formation": {},
