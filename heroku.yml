@@ -10,4 +10,4 @@ release:
   command:
     - db:prepare
 run:
-  web: server
+  web: bin/rails s

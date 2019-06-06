@@ -59,4 +59,3 @@ COPY . .
 # RUN bin/rails db:schema:load
 
 # EXPOSE 3000
-ENTRYPOINT ["bin/rails"]
