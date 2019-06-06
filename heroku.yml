@@ -8,6 +8,6 @@ build:
 release:
   image: web
   command:
-    - db:prepare
+    - bin/rails db:prepare
 run:
   web: bin/rails s
