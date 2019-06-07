@@ -8,4 +8,5 @@ RUN apk add --update --no-cache \
     build-base \
     postgresql-dev \
     tzdata \
-    yarn
+    yarn \
+    bash
