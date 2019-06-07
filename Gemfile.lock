@@ -1,10 +1,11 @@
 GIT
   remote: https://github.com/okonomi/onkcop.git
-  revision: 73ca9f85a7d9bccc32a3b0c9895f02e08f63feb9
+  revision: 0281dd1cf447240feb08a21571e16d4358fe451e
   specs:
     onkcop (0.53.0.3)
       rubocop (>= 0.53.0)
-      rubocop-performance
+      rubocop-performance (>= 1.3.0)
+      rubocop-rails (>= 2.0.0)
       rubocop-rspec (>= 1.24.0)
 
 GEM
@@ -240,6 +241,9 @@ GEM
       unicode-display_width (>= 1.4.0, < 1.7)
     rubocop-performance (1.3.0)
       rubocop (>= 0.68.0)
+    rubocop-rails (2.0.0)
+      rack (>= 2.0)
+      rubocop (>= 0.70.0)
     rubocop-rspec (1.33.0)
       rubocop (>= 0.60.0)
     ruby-progressbar (1.10.1)
