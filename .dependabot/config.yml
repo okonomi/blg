@@ -29,4 +29,4 @@ update_configs:
       - match:
           dependency_type: "production"
           update_type: "semver:patch"
-    version_requirement_updates: "off"
+    version_requirement_updates: "auto"
