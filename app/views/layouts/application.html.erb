@@ -7,8 +7,11 @@
                           reverse: true,
                           og: {
                             title: :title,
-                            type: 'article',
-                            image: 'https://www.gravatar.com/avatar/11148320361c31b9e19075ccec589408',
+                            image: {
+                              url: 'https://www.gravatar.com/avatar/11148320361c31b9e19075ccec589408?size=200',
+                              width: 200,
+                              height: 200
+                            },
                           } %>
 
     <%= csrf_meta_tags %>
