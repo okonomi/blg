@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= display_meta_tags site: ENV.fetch("BLOG_TITLE"),
+                          description: ENV.fetch("BLOG_TITLE"),
                           reverse: true,
                           og: {
-                            title: :title,
+                            title: :site,
+                            description: :description,
+                            url: request.url,
                             image: {
-                              url: 'https://www.gravatar.com/avatar/11148320361c31b9e19075ccec589408?size=200',
+                              _: "https://www.gravatar.com/avatar/11148320361c31b9e19075ccec589408?size=200",
                               width: 200,
                               height: 200
                             },
