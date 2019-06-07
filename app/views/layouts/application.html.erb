@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><%= page_title yield(:title) %></title>
+    <%= display_meta_tags site: ENV.fetch("BLOG_TITLE"),
+                          reverse: true,
+                          og: {
+                            title: :title,
+                            type: 'article',
+                            image: 'https://www.gravatar.com/avatar/11148320361c31b9e19075ccec589408',
+                          } %>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
