@@ -9,6 +9,7 @@ services:
       - .:/app
       - bundle:/app/.bundle
       - node_modules:/app/node_modules
+      - home:/root
     environment:
       BUNDLE_PATH: /app/.bundle
       BUNDLE_JOBS: 4
@@ -28,3 +29,4 @@ volumes:
   bundle:
   node_modules:
   pg_data:
+  home:
