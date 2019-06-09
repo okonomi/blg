@@ -18,6 +18,7 @@ require("channels")
 
 import 'bulma/css/bulma'
 import '@fortawesome/fontawesome-free/css/all.css'
+import '../src/bulma'
 
 const Trix = require("trix")
 require("@rails/actiontext")
