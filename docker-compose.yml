@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  web:
+  web: &app_base
     build: .
     ports:
       - "3000:3000"
@@ -13,9 +13,15 @@ services:
     environment:
       BUNDLE_PATH: /app/.bundle
       BUNDLE_JOBS: 4
+      WEBPACKER_DEV_SERVER_HOST: webpacker
     command: /bin/sh -c "rm -f tmp/pids/server.pid && bin/rails s -p 3000 -b '0.0.0.0'"
     depends_on:
       - db
+  webpacker:
+    <<: *app_base
+    ports:
+      - "3035:3035"
+    command: bin/webpack-dev-server
   db:
     image: postgres:11.2
     ports:
