@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  web:
+  web: &app_base
     build: .
     ports:
       - "3000:3000"
@@ -18,18 +18,9 @@ services:
     depends_on:
       - db
   webpacker:
-    build: .
+    <<: *app_base
     ports:
       - "3035:3035"
-    volumes:
-      - .:/app
-      - bundle:/app/.bundle
-      - node_modules:/app/node_modules
-      - home:/root
-    environment:
-      BUNDLE_PATH: /app/.bundle
-      BUNDLE_JOBS: 4
-      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
     command: bin/webpack-dev-server
   db:
     image: postgres:11.2
