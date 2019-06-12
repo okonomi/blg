@@ -14,7 +14,7 @@ services:
       BUNDLE_PATH: /app/.bundle
       BUNDLE_JOBS: 4
       WEBPACKER_DEV_SERVER_HOST: webpacker
-      WEBPACKER_DEV_SERVER_PUBLIC: webpacker:3035
+      WEBPACKER_DEV_SERVER_PUBLIC: localhost:3035
     command: /bin/sh -c "rm -f tmp/pids/server.pid && bin/rails s -p 3000 -b '0.0.0.0'"
     depends_on:
       - db
@@ -31,7 +31,6 @@ services:
       BUNDLE_PATH: /app/.bundle
       BUNDLE_JOBS: 4
       WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
-      WEBPACKER_DEV_SERVER_PUBLIC: 0.0.0.0:3035
     command: bin/webpack-dev-server
     depends_on:
       - db
