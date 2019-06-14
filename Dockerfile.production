@@ -17,7 +17,7 @@ RUN apk add --update --no-cache \
     tzdata
 
 # install gems
-RUN gem install bundler
+RUN gem install bundler -v 2.0.2
 COPY Gemfile .
 COPY Gemfile.lock .
 RUN bundle install --clean --frozen --jobs $(nproc) --without development test
