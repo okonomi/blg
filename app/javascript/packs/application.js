@@ -19,5 +19,6 @@ require("@rails/actiontext")
 import 'bulma/css/bulma'
 import '@fortawesome/fontawesome-free/css/all.css'
 
-import '../src/bulma'
+import '../src/bulma-navbar'
+import '../src/bulma-notification'
 import '../src/trix'

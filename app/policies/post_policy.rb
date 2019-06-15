@@ -27,6 +27,10 @@ class PostPolicy < ApplicationPolicy
     @user.present?
   end
 
+  def draft?
+    @user.present?
+  end
+
   class Scope < Scope
     def resolve
       scope.all
