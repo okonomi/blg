@@ -1,6 +1,6 @@
 build:
   docker:
-    web: Dockerfile.production
+    web: Dockerfile
   config:
     GITHUB_OAUTH_CLIENT_KEY: xxx
     GITHUB_OAUTH_CLIENT_SECRET: xxx
