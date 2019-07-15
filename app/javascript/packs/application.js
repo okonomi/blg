@@ -16,8 +16,9 @@ require("@rails/actiontext")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import 'bulma'
 import '@fortawesome/fontawesome-free/css/all.css'
+
+import '../src/stylesheets/application'
 
 import '../src/bulma-navbar'
 import '../src/bulma-notification'
