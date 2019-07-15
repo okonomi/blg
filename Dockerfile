@@ -29,7 +29,7 @@ WORKDIR /app
 # install gems
 COPY Gemfile .
 COPY Gemfile.lock .
-RUN bundle install --clean --frozen --jobs 4 --without development test
+RUN bundle install --frozen --jobs 4 --without development test
 
 # install npm packages
 COPY package.json .
