@@ -5,7 +5,7 @@
     "@fortawesome/fontawesome-free": "^5.8.2",
     "@rails/actioncable": "^6.0.0-rc1",
     "@rails/actiontext": "^6.0.0-rc1",
-    "@rails/activestorage": "^6.0.0-rc1",
+    "@rails/activestorage": "^6.0.0-rc2",
     "@rails/ujs": "^6.0.0-rc1",
     "@rails/webpacker": "^4.0.2",
     "bulma": "^0.7.4",
