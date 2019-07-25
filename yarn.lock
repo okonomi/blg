@@ -776,10 +776,10 @@
   dependencies:
     spark-md5 "^3.0.0"
 
-"@rails/ujs@^6.0.0-rc1":
-  version "6.0.0-rc1"
-  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-6.0.0-rc1.tgz#2707eb9c91f0c8f0c02e943c91974207c1f73a8d"
-  integrity sha512-BpqXn2fTygDPRatrSVJ+DVaQnRJrwU82x2VvtEyY9crYmeUj0diJOrR/30MAXZ7u62zglniMEZFoajRB7JANLg==
+"@rails/ujs@^6.0.0-rc2":
+  version "6.0.0-rc2"
+  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-6.0.0-rc2.tgz#b724b0fa248b2b5c6b5bd1e9a321af9668d4e201"
+  integrity sha512-qSiGlwvD6Fh9TFZ1DjOKsA+5597Wiz1tgX59UOM8vL1dXuQMxW4VVME02+Z5HT/SJQp5iPa0IFE/WNhxgIYKSA==
 
 "@rails/webpacker@^4.0.2":
   version "4.0.7"
