@@ -757,10 +757,10 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.9.0.tgz#1aa5c59efb1b8c6eb6277d1e3e8c8f31998b8c8e"
   integrity sha512-g795BBEzM/Hq2SYNPm/NQTIp3IWd4eXSH0ds87Na2jnrAUFX3wkyZAI4Gwj9DOaWMuz2/01i8oWI7P7T/XLkhg==
 
-"@rails/actioncable@^6.0.0-rc1":
-  version "6.0.0-rc1"
-  resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.0.0-rc1.tgz#283287df5a7344bfc67c5116b6d476ae6efa5a92"
-  integrity sha512-Yu+GYe87tTYcu7N2usTPAIdcTo9Flwp7/6BE7eaEJIF1IWGGvI4nLQ1wcA1RsLPO5tZ5jT+olZYFlu+QxdQo1g==
+"@rails/actioncable@^6.0.0-rc2":
+  version "6.0.0-rc2"
+  resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.0.0-rc2.tgz#f500c3b9386c8aa46993f526801dfe63203eb3a3"
+  integrity sha512-a3oVc4T+itcsfJKlDX2F9IrRz/958+8PJJnU/w9S2sSZlT27wdgikvrsk45Cw1wlE5wQdk4BZ2WNBKAKNytwhQ==
 
 "@rails/actiontext@^6.0.0-rc1":
   version "6.0.0-rc1"
