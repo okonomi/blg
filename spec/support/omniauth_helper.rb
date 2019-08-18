@@ -13,6 +13,7 @@ module OmniAuthHelper
 
   def authenticate_as(user)
     prepare_mock_auth_from(user)
-    visit "/auth/github"
+    visit "/auth"
+    click_link "Login"
   end
 end
