@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get "/auth/github/callback" => "sessions#create"
   delete "/logout" => "sessions#destroy"
 
+  resource :auth, only: :show
+
   namespace :posts do
     resources :drafts, only: :index
   end
