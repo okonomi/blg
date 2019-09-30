@@ -1,4 +1,4 @@
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   (document.querySelectorAll('.notification .delete') || []).forEach($delete => {
     $notification = $delete.parentNode
     $delete.addEventListener('click', () => {
