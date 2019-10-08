@@ -1,4 +1,4 @@
-FROM ruby:2.6.4-alpine3.9 AS base
+FROM ruby:2.6.5-alpine3.9 AS base
 
 WORKDIR /app
 
@@ -48,7 +48,7 @@ COPY app/javascript app/javascript
 RUN bin/rails assets:precompile
 
 
-FROM ruby:2.6.4-alpine3.9 AS production
+FROM ruby:2.6.5-alpine3.9 AS production
 
 ENV RAILS_ENV production
 ENV RAILS_LOG_TO_STDOUT 1
