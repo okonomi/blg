@@ -10,7 +10,7 @@
     "@rails/webpacker": "^4.0.2",
     "bulma": "^0.8.0",
     "highlight.js": "^9.16.2",
-    "trix": "^1.2.1"
+    "trix": "^1.2.2"
   },
   "version": "0.1.0",
   "devDependencies": {
