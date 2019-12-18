@@ -11,6 +11,7 @@ services:
       - .:/app
       - bundle:/app/.bundle
       - node_modules:/app/node_modules
+      - rails_tmp:/app/tmp
       - home:/root
     environment:
       BUNDLE_PATH: /app/.bundle
@@ -36,5 +37,6 @@ services:
 volumes:
   bundle:
   node_modules:
+  rails_tmp:
   pg_data:
   home:
