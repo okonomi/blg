@@ -31,7 +31,7 @@ RUN bundle config set frozen 'true'
 RUN bundle config set without 'development test'
 COPY Gemfile .
 COPY Gemfile.lock .
-RUN bundle install --frozen --jobs 4 --without development test
+RUN bundle install --jobs 4
 
 # install npm packages
 COPY package.json .
