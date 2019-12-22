@@ -21,8 +21,7 @@ cache:
   yarn: true
 
 before_install:
-  - yes | gem update --system
-  - gem install bundler
+  - gem update --system 3.1.2
   - yarn
 
 before_script:
