@@ -27,6 +27,8 @@ ARG SECRET_KEY_BASE
 WORKDIR /app
 
 # install gems
+RUN bundle config set frozen 'true'
+RUN bundle config set without 'development test'
 COPY Gemfile .
 COPY Gemfile.lock .
 RUN bundle install --frozen --jobs 4 --without development test
