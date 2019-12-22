@@ -19,6 +19,9 @@ WORKDIR /app
 
 FROM base AS builder
 
+ENV BUNDLE_FROZEN true
+ENV BUNDLE_WITHOUT development test
+
 ENV RAILS_ENV production
 ARG GITHUB_OAUTH_CLIENT_KEY
 ARG GITHUB_OAUTH_CLIENT_SECRET
@@ -27,8 +30,6 @@ ARG SECRET_KEY_BASE
 WORKDIR /app
 
 # install gems
-RUN bundle config set frozen 'true'
-RUN bundle config set without 'development test'
 COPY Gemfile .
 COPY Gemfile.lock .
 RUN bundle install --jobs 4
