@@ -3,7 +3,6 @@ AllCops:
     - "bin/*"
     - "db/schema.rb"
     - "node_modules/**/*"
-    - "test/**/*"
 
 Layout/LineLength:
   Max: 200
