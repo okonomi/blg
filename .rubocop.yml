@@ -1,16 +1,55 @@
-inherit_gem:
-  onkcop:
-    - "config/rubocop.yml"
-    - "config/rails.yml"
-    - "config/rspec.yml"
-    - "config/performance.yml"
-
-inherit_mode:
-  merge:
-    - Exclude
-
 AllCops:
-  TargetRubyVersion: 2.6
-  TargetRailsVersion: 6.0
   Exclude:
     - "bin/*"
+    - "db/schema.rb"
+    - "node_modules/**/*"
+    - "test/**/*"
+
+Layout/LineLength:
+  Max: 200
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
+
+Layout/SpaceInsideBlockBraces:
+  SpaceBeforeBlockParameters: false
+
+Metrics/AbcSize:
+  Max: 20
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/GuardClause:
+  MinBodyLength: 5
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - "db/migrate/*.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+    - "config/environments/*"
