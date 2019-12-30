@@ -7,11 +7,11 @@ require "blg/version"
 Gem::Specification.new do |spec|
   spec.name        = "blg"
   spec.version     = Blg::VERSION
-  spec.authors     = [""]
-  spec.email       = [""]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of Blg."
-  spec.description = "TODO: Description of Blg."
+  spec.authors     = ["okonomi"]
+  spec.email       = ["okonomi@oknm.jp"]
+  spec.homepage    = "https://github.com/okonomi/blg"
+  spec.summary     = "\"Blg\" is tiny blog made with Rails."
+  spec.description = "\"Blg\" is tiny blog made with Rails."
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
