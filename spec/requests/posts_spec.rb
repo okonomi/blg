@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "Posts", type: :request do
   describe "GET /posts" do
@@ -37,7 +37,7 @@ RSpec.describe "Posts", type: :request do
   describe "POST /posts" do
     context "when unauthorized" do
       subject { -> { post posts_path } }
-  
+
       it { is_expected.to raise_error(Pundit::NotAuthorizedError) }
     end
 
@@ -58,8 +58,8 @@ RSpec.describe "Posts", type: :request do
         {
           post: {
             title: "title",
-            content: "content"
-          }
+            content: "content",
+          },
         }
       end
 
