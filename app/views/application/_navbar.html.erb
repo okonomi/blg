@@ -14,13 +14,13 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <%= link_to "Drafts", posts_drafts_path, class: "navbar-item" if policy(Post).draft? %>
+      <%= link_to "Drafts", posts_drafts_path, class: "navbar-item" if policy(Blg::Post).draft? %>
     </div>
 
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <%= link_to "New Post", new_post_path, class: "button is-primary" if policy(Post).new? && !current_page?(new_post_path) %>
+          <%= link_to "New Post", new_post_path, class: "button is-primary" if policy(Blg::Post).new? && !current_page?(new_post_path) %>
           <%= link_to "Logout", logout_path, method: :delete, class: "button is-light" if logged_in? %>
         </div>
       </div>

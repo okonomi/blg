@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Post, type: :model do
+RSpec.describe Blg::Post, type: :model do
   describe "uid" do
     context "when create post" do
       subject do

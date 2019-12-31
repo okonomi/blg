@@ -1,10 +1,10 @@
 require "rails_helper"
 
-RSpec.describe PostDecorator do
+RSpec.describe Blg::PostDecorator do
   describe "#published_date" do
     subject { post.published_date }
 
-    let(:post) { Post.new(published_at: published_at).extend PostDecorator }
+    let(:post) { Blg::Post.new(published_at: published_at).extend Blg::PostDecorator }
 
     context "when published_at is null" do
       let(:published_at) { nil }

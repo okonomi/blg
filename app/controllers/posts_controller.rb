@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   after_action :verify_authorized
 
   def index
-    @posts = authorize Post.includes(:tags, :rich_text_content).published.latest
+    @posts = authorize Blg::Post.includes(:tags, :rich_text_content).published.latest
 
     respond_to do |format|
       format.html
@@ -12,12 +12,12 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = authorize Post.new(published_at: Time.current)
+    @post = authorize Blg::Post.new(published_at: Time.current)
   end
 
   def create
-    authorize Post
-    @post = Post.new(post_params)
+    authorize Blg::Post
+    @post = Blg::Post.new(post_params)
     if @post.save
       redirect_to @post, notice: t("flash.post_created")
     end
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   private
 
     def set_post
-      @post = authorize Post.find_by(uid: params[:uid])
+      @post = authorize Blg::Post.find_by(uid: params[:uid])
     end
 
     def post_params

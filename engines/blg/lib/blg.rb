@@ -1,5 +1,6 @@
 require "blg/engine"
 
 module Blg
-  # Your code goes here...
+  def self.table_name_prefix
+  end
 end
