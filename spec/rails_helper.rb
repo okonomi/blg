@@ -72,7 +72,7 @@ RSpec.configure do |config|
     if example.metadata[:type] == :system
       if example.metadata[:js]
         driven_by :selenium, using: :headless_chrome do |driver_option|
-          driver_option.add_argument('no-sandbox')
+          driver_option.add_argument("no-sandbox")
         end
       else
         driven_by :rack_test
