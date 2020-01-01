@@ -32,7 +32,11 @@
     <%= render 'flash' %>
     <%= render 'navbar' %>
 
-    <%= yield %>
+    <main class="columns">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
 
     <%= render 'footer' %>
   </body>

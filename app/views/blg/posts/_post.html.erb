@@ -1,42 +1,25 @@
 <section class="section">
-  <div class="container">
-    <div class="columns is-mobile is-vcentered">
-      <div class="column">
-        <div>
-          <p class="heading"><%= post.published_date %></p>
-          <p class="title">
-            <%= link_to post.title, post_path(post) %>
-          </p>
-          <p class="subtitle">
-            <% post.tags.each do |tag| %>
-              <%= link_to tag_path(tag) do %>
-                <span class="tag"><%= tag.name %></span>
-              <% end %>
-            <% end %>
-          </p>
-        </div>
-      </div>
-      <div class="column is-1 has-text-right">
-        <% if policy(post).edit? %>
-          <%= link_to edit_post_path(post) do %>
-            <span class="icon has-text-info">
-              <i class="fas fa-edit"></i>
-            </span>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-
-    <div class="content">
-      <%= post.content %>
-
-      <p class="has-text-right">
-        <%= link_to post_path(post) do %>
-          <span class="icon has-text-info">
-            <i class="fas fa-link"></i>
-          </span>
-        <% end %>
-      </p>
-    </div>
+  <p class="heading">
+    <%= post.published_date %>
+    <% if policy(post).edit? %>
+      <%= link_to edit_post_path(post) do %>
+        <span class="icon has-text-info">
+          <i class="fas fa-edit"></i>
+        </span>
+      <% end %>
+    <% end %>
+  </p>
+  <h1 class="title">
+    <%= link_to post.title, post_path(post) %>
+  </h1>
+  <p class="subtitle">
+    <% post.tags.each do |tag| %>
+      <%= link_to tag_path(tag) do %>
+        <span class="tag"><%= tag.name %></span>
+      <% end %>
+    <% end %>
+  </p>
+  <div class="content">
+    <%= post.content %>
   </div>
 </section>
