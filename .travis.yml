@@ -12,6 +12,9 @@ env:
 services:
   - postgresql
 
+addons:
+  chrome: stable
+
 bundler_args: --without production
 
 cache:
