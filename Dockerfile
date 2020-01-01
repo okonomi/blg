@@ -16,6 +16,10 @@ FROM base AS development
 
 WORKDIR /app
 
+RUN apk add --no-cache \
+    less \
+    chromium \
+    chromium-chromedriver
 
 FROM base AS builder
 
