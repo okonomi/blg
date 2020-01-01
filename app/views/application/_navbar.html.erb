@@ -1,8 +1,12 @@
 <nav class="navbar is-spaced has-shadow" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <%= link_to root_path, class: "navbar-item" do %>
-      <%= image_tag "https://www.gravatar.com/avatar/11148320361c31b9e19075ccec589408" %>
-      <%= ENV.fetch('BLOG_TITLE') %>
+      <span class="icon is-large">
+        <%= image_tag "https://www.gravatar.com/avatar/11148320361c31b9e19075ccec589408" %>
+      </span>
+      <span class="is-size-4 has-text-weight-bold">
+        <%= ENV.fetch('BLOG_TITLE') %>
+      </span>
     <% end %>
 
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
