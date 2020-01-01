@@ -78,6 +78,8 @@ group :development do
   gem "rubocop-rails"
   gem "rubocop-rake"
   gem "rubocop-rspec"
+
+  gem "oneshot_task_generator"
 end
 
 group :test do
