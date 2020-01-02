@@ -2,6 +2,10 @@
 
 @import "bulma-initialize";
 
+body {
+  font-kerning: auto;
+}
+
 .section.is-text-wrapped {
   overflow-wrap: break-word;
 }
