@@ -10,6 +10,11 @@ body {
   overflow-wrap: break-word;
 }
 
+.image.is-radius {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
 .heavens-door-custom {
   top: inherit !important;
   bottom: 10px;
