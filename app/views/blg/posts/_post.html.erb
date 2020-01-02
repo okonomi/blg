@@ -12,13 +12,15 @@
   <h1 class="title">
     <%= link_to post.title, post_path(post) %>
   </h1>
-  <p class="subtitle">
-    <% post.tags.each do |tag| %>
-      <%= link_to tag_path(tag) do %>
-        <span class="tag"><%= tag.name %></span>
+  <% if post.tags.size > 0 %>
+    <p class="subtitle">
+      <% post.tags.each do |tag| %>
+        <%= link_to tag_path(tag) do %>
+          <span class="tag"><%= tag.name %></span>
+        <% end %>
       <% end %>
-    <% end %>
-  </p>
+    </p>
+  <% end %>
   <div class="content">
     <%= post.content %>
   </div>
