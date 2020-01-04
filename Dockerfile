@@ -19,7 +19,8 @@ WORKDIR /app
 RUN apk add --no-cache \
     less \
     chromium \
-    chromium-chromedriver
+    chromium-chromedriver \
+    postgresql-client
 
 FROM base AS builder
 
