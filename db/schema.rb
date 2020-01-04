@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_11_103626) do
+ActiveRecord::Schema.define(version: 2020_01_04_024253) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,8 +59,8 @@ ActiveRecord::Schema.define(version: 2019_05_11_103626) do
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "published_at", precision: 6
-    t.string "uid"
+    t.datetime "published_at", precision: 6, null: false
+    t.string "uid", null: false
     t.integer "status", default: 0, null: false
     t.index ["uid"], name: "index_posts_on_uid"
   end
