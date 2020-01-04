@@ -19,7 +19,7 @@ RSpec.describe "Posts", type: :system, js: true do
     end
 
     it "can update post" do
-      post = Blg::Post.create!(title: "test", content: "test")
+      post = create(:post)
       visit edit_post_path(post)
 
       fill_in "Title", with: "update title"
@@ -32,7 +32,7 @@ RSpec.describe "Posts", type: :system, js: true do
   end
 
   it "show post" do
-    post = Blg::Post.create!(title: "test title", content: "test content")
+    post = create(:post)
     visit post_path(post)
 
     expect(page).to have_content "test title"

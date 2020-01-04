@@ -59,6 +59,7 @@ RSpec.describe "Posts", type: :request do
           post: {
             title: "title",
             content: "content",
+            published_at: Time.zone.now.to_s,
           },
         }
       end
