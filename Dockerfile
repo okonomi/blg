@@ -2,7 +2,6 @@ FROM ruby:2.7.0-alpine3.10 AS base
 
 WORKDIR /app
 
-RUN gem update --system 3.1.2
 RUN apk add --no-cache \
     git \
     build-base \
@@ -10,6 +9,8 @@ RUN apk add --no-cache \
     tzdata \
     yarn \
     bash
+RUN gem update --system 3.1.2
+RUN gem install bundler -v 2.1.4
 
 
 FROM base AS development
@@ -65,10 +66,11 @@ ENV RAILS_SERVE_STATIC_FILES 1
 
 WORKDIR /app
 
-RUN gem update --system 3.1.2
 RUN apk add --no-cache \
     postgresql-libs \
     tzdata
+RUN gem update --system 3.1.2
+RUN gem install bundler -v 2.1.4
 
 COPY --from=builder /usr/local/bundle /usr/local/bundle
 COPY --from=builder /app/public/assets /app/public/assets
