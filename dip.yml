@@ -1,0 +1,18 @@
+version: '4.1'
+
+compose:
+  files:
+    - docker-compose.yml
+
+interaction:
+  sh:
+    service: web
+    command: /bin/sh
+
+  rails:
+    service: web
+    command: bin/rails
+
+  setup:
+    service: web
+    command: bin/setup
