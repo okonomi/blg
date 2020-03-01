@@ -48,4 +48,5 @@ yarn-debug.log*
 .yarn-integrity
 
 .env
+Brewfile
 Brewfile.lock.json
