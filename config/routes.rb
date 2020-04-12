@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :posts, param: :uid
   get "/feed", to: "posts#index", defaults: { format: :atom }
   resources :tags, only: :show
-  direct(:login) { "/auth/github?origin=https://oknm.jp/auth" }
+  direct(:login) { "/auth/github?origin=#{request.original_url}" }
 
   root "posts#index"
 end
