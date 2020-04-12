@@ -7,6 +7,7 @@ build:
     GITHUB_OAUTH_CLIENT_KEY: xxx
     GITHUB_OAUTH_CLIENT_SECRET: xxx
     SECRET_KEY_BASE: xxx
+    OMNIAUTH_FULL_HOST: xxx
 release:
   image: web
   command:
