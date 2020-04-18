@@ -20,7 +20,8 @@ RUN apk add --no-cache \
     less \
     chromium \
     chromium-chromedriver \
-    postgresql-client
+    postgresql-client \
+    imagemagick
 
 FROM base AS builder
 
@@ -69,7 +70,8 @@ WORKDIR /app
 RUN gem update --system 3.1.2
 RUN apk add --no-cache \
     postgresql-libs \
-    tzdata
+    tzdata \
+    imagemagick
 
 COPY --from=builder /usr/local/bundle /usr/local/bundle
 COPY --from=builder /app/public/assets /app/public/assets
