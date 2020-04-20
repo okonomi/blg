@@ -2,7 +2,10 @@
   "name": "Blg",
   "description": "\"Blg\" is tiny blog made with Rails.",
   "repository": "https://github.com/okonomi/blg",
-  "addons": ["heroku-postgresql"],
+  "addons": [
+    "heroku-postgresql",
+    "cloudinary"
+  ],
   "buildpacks": [],
   "env": {
     "BLOG_TITLE": {
@@ -32,6 +35,9 @@
     },
     "OMNIAUTH_FULL_HOST": {
       "description": "OmniAuth.config.full_host value"
+    },
+    "CLOUDINARY_URL": {
+      "description": "Cloudinary credentials"
     }
   },
   "formation": {},
