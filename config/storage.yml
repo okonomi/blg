@@ -30,6 +30,7 @@ local:
 
 cloudinary:
   service: Cloudinary
+  secure: true
 
 # mirror:
 #   service: Mirror
