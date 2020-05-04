@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   direct(:login) { "/auth/github?origin=#{request.original_url}" }
 
   root "posts#index"
+
+  mount Blg::Engine => "/blg"
 end
