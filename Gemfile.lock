@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 75f6539d0e94c76d93d61feef06c3b0974fe62c1
+  revision: af5cd95a4e7923ec0478ac0d7cdcff1c5b765a99
   branch: 6-0-stable
   specs:
     actioncable (6.0.3.2)
@@ -179,7 +179,7 @@ GEM
     netrc (0.11.0)
     newrelic_rpm (6.11.0.365)
     nio4r (2.5.2)
-    nokogiri (1.10.9)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     oauth2 (1.4.4)
       faraday (>= 0.8, < 2.0)
@@ -338,7 +338,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.3.0)
+    zeitwerk (2.3.1)
 
 PLATFORMS
   ruby
