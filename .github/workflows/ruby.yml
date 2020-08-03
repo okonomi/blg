@@ -45,6 +45,12 @@ jobs:
         run: |
           cp config/database.yml.github-actions config/database.yml
           bin/rails db:prepare
+        env:
+          DISABLE_SPRING: 1
+          BLOG_TITLE: Blg
+          GITHUB_OAUTH_CLIENT_KEY: xxx
+          GITHUB_OAUTH_CLIENT_SECRET: xxx
+          GITHUB_USER: github_user
       - name: Run tests
         run: bin/rspec
         env:
