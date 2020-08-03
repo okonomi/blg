@@ -42,7 +42,9 @@ jobs:
       - name: Install dependencies
         run: bundle install
       - name: Setup database
-        run: cp config/database.yml.github-actions config/database.yml
+        run: |
+          cp config/database.yml.github-actions config/database.yml
+          bin/rails db:prepare
       - name: Run tests
         run: bin/rspec
         env:
