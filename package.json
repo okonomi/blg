@@ -12,7 +12,7 @@
     "core-js": "^3.6.5",
     "highlight.js": "^10.1.2",
     "regenerator-runtime": "^0.13.7",
-    "trix": "^1.2.3"
+    "trix": "^1.2.4"
   },
   "version": "0.1.0",
   "devDependencies": {
