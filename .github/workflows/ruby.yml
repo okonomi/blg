@@ -30,21 +30,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Ruby
+      - name: Setup Ruby
         # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
         # change this to (see https://github.com/ruby/setup-ruby#versioning):
         # uses: ruby/setup-ruby@v1
         uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
         with:
           ruby-version: 2.7.1
-      - name: Set up rubygems
+      - name: Setup rubygems
         run: gem update --system
-      - name: Install dependencies
-        run: bundle install
-      - name: Setup database
+      - name: Setup Rails
         run: |
           cp config/database.yml.github-actions config/database.yml
-          bin/rails db:prepare
+          bin/setup
         env:
           RAILS_ENV: test
           DISABLE_SPRING: 1
