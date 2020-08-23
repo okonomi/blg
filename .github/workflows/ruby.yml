@@ -54,6 +54,7 @@ jobs:
       - name: Setup Rails
         run: |
           cp config/database.yml.github-actions config/database.yml
+          bundle config path vendor/bundle
           bin/setup
         env:
           RAILS_ENV: test
