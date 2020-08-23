@@ -66,6 +66,7 @@ jobs:
       - name: Run tests
         run: bin/rspec
         env:
+          BUNDLE_PATH: vendor/bundle
           DISABLE_SPRING: 1
           BLOG_TITLE: Blg
           GITHUB_OAUTH_CLIENT_KEY: xxx
