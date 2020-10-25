@@ -25,6 +25,7 @@ cache:
 
 before_install:
   - gem update --system 3.1.2
+  - gem install bundler:2.1.4
   - sudo apt-get install chromium-chromedriver
   - nvm use stable
 
@@ -32,4 +33,6 @@ before_script:
   - bin/setup
 
 script:
+  - gem -v
+  - bundler -v
   - bin/rspec

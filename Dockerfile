@@ -3,6 +3,7 @@ FROM ruby:2.7.2-alpine3.11 AS base
 WORKDIR /app
 
 RUN gem update --system 3.1.2
+RUN gem install bundler:2.1.4
 RUN apk add --no-cache \
     git \
     build-base \
@@ -68,6 +69,7 @@ ENV RAILS_SERVE_STATIC_FILES 1
 WORKDIR /app
 
 RUN gem update --system 3.1.2
+RUN gem install bundler:2.1.4
 RUN apk add --no-cache \
     postgresql-libs \
     tzdata \
