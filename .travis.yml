@@ -32,4 +32,6 @@ before_script:
   - bin/setup
 
 script:
+  - gem -v
+  - bundler -v
   - bin/rspec
