@@ -32,12 +32,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-      - uses: actions/cache@v2
-        with:
           path: node_modules
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
@@ -48,7 +42,7 @@ jobs:
         # uses: ruby/setup-ruby@v1
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.2
+          bundler-cache: true
       - name: Setup rubygems
         run: gem update --system
       - name: Setup Rails
