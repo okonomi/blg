@@ -7,7 +7,7 @@ RSpec.describe Blg::PostPolicy, type: :policy do
 
   permissions :new? do
     context "logged in user" do
-      let(:user) { build(:user) }
+      let(:user) { User.new }
       it { is_expected.to permit(user, post) }
     end
 
@@ -19,7 +19,7 @@ RSpec.describe Blg::PostPolicy, type: :policy do
 
   permissions :edit? do
     context "logged in user" do
-      let(:user) { build(:user) }
+      let(:user) { User.new }
       it { is_expected.to permit(user, post) }
     end
 
@@ -31,7 +31,7 @@ RSpec.describe Blg::PostPolicy, type: :policy do
 
   permissions :destroy? do
     context "logged in user" do
-      let(:user) { build(:user) }
+      let(:user) { User.new }
       it { is_expected.to permit(user, post) }
     end
 

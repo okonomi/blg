@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "Posts", type: :system, js: true do
   context "with logged in user" do
     before do
-      user = build(:user)
+      user = User.new
       authenticate_as(user)
     end
 
