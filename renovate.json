@@ -6,5 +6,11 @@
   ],
   "enabledManagers": [
     "npm"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": ["^@rails/"],
+      "enabled": false
+    }
   ]
 }
