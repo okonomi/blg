@@ -1,4 +1,5 @@
 AllCops:
+  NewCops: enable
   Exclude:
     - "bin/*"
     - "db/schema.rb"
@@ -22,6 +23,9 @@ Layout/IndentationConsistency:
 
 Layout/SpaceInsideBlockBraces:
   SpaceBeforeBlockParameters: false
+
+Naming/VariableNumber:
+  Enabled: false
 
 Metrics/AbcSize:
   Max: 20
