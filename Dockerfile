@@ -1,9 +1,8 @@
-FROM ruby:2.7.2-alpine3.11 AS base
+FROM ruby:3.0.0-alpine3.13 AS base
 
 WORKDIR /app
 
-RUN gem update --system 3.1.2
-RUN gem install bundler:2.1.4
+RUN gem update --system
 RUN apk add --no-cache \
     git \
     build-base \
@@ -60,7 +59,7 @@ COPY app/javascript app/javascript
 RUN bin/rails assets:precompile
 
 
-FROM ruby:2.7.2-alpine3.11 AS production
+FROM ruby:3.0.0-alpine3.13 AS production
 
 ENV RAILS_ENV production
 ENV RAILS_LOG_TO_STDOUT 1
@@ -68,8 +67,7 @@ ENV RAILS_SERVE_STATIC_FILES 1
 
 WORKDIR /app
 
-RUN gem update --system 3.1.2
-RUN gem install bundler:2.1.4
+RUN gem update --system
 RUN apk add --no-cache \
     postgresql-libs \
     tzdata \
