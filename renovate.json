@@ -5,6 +5,8 @@
     "group:allNonMajor"
   ],
   "enabledManagers": [
+    "bundler",
+    "ruby-version",
     "npm"
   ],
   "packageRules": [
