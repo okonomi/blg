@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Blg::PostPolicy, type: :policy do
+RSpec.describe PostPolicy, type: :policy do
   subject { described_class }
 
   let(:post) { build(:post) }
