@@ -1,9 +1,3 @@
-PATH
-  remote: engines/blg
-  specs:
-    blg (0.1.0)
-      rails
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -343,7 +337,6 @@ PLATFORMS
 
 DEPENDENCIES
   active_decorator
-  blg!
   bootsnap (>= 1.4.4)
   bullet
   byebug

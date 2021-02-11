@@ -19,9 +19,9 @@ RSpec.describe "Posts", type: :request do
 
     context "when autholized" do
       before do
-        mock_policy = spy(Blg::PostPolicy)
+        mock_policy = spy(PostPolicy)
 
-        allow(Blg::PostPolicy).to receive(:new).and_return(mock_policy)
+        allow(PostPolicy).to receive(:new).and_return(mock_policy)
         allow(mock_policy).to receive(:new?).and_return(true)
       end
 
@@ -43,9 +43,9 @@ RSpec.describe "Posts", type: :request do
 
     context "when authorized" do
       before do
-        mock_policy = spy(Blg::PostPolicy)
+        mock_policy = spy(PostPolicy)
 
-        allow(Blg::PostPolicy).to receive(:new).and_return(mock_policy)
+        allow(PostPolicy).to receive(:new).and_return(mock_policy)
         allow(mock_policy).to receive(:create?).and_return(true)
       end
 
