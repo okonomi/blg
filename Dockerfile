@@ -39,7 +39,6 @@ WORKDIR /app
 # install gems
 COPY Gemfile .
 COPY Gemfile.lock .
-COPY engines/blg engines/blg
 RUN bundle install --jobs 4
 
 # install npm packages
