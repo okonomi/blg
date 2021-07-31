@@ -1,5 +1,7 @@
 FROM ruby:3.0.2-alpine3.14 AS base
 
+ENV TZ=Asia/Tokyo
+
 WORKDIR /app
 
 RUN gem update --system
