@@ -70,6 +70,7 @@ WORKDIR /app
 
 RUN gem update --system
 RUN apk add --no-cache \
+    curl \
     postgresql-libs \
     tzdata \
     imagemagick
