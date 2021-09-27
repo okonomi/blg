@@ -2,15 +2,15 @@
   "name": "blg",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.15.3",
+    "@fortawesome/fontawesome-free": "5.15.4",
     "@rails/actioncable": "6.1.4",
     "@rails/actiontext": "6.1.4",
     "@rails/activestorage": "6.1.4",
     "@rails/ujs": "6.1.4",
     "@rails/webpacker": "5.4.0",
     "bulma": "0.9.3",
-    "core-js": "3.16.0",
-    "highlight.js": "11.1.0",
+    "core-js": "3.18.1",
+    "highlight.js": "11.2.0",
     "regenerator-runtime": "0.13.9",
     "trix": "1.3.1"
   },
