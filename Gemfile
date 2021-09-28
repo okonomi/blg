@@ -69,11 +69,10 @@ group :development do
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   gem "rack-mini-profiler", ">= 2.3.3"
 
-  gem "listen", "~> 3.3"
+  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
+  # gem "spring"
 
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem "spring"
-  gem "spring-commands-rspec"
+  gem "listen", "~> 3.3"
 
   gem "heavens_door"
 
