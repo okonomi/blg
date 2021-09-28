@@ -371,7 +371,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 5.0)
   pundit
-  rack-mini-profiler (~> 2.0)
+  rack-mini-profiler (>= 2.3.3)
   rails (= 7.0.0.alpha2)
   rspec-rails
   rubocop
