@@ -366,7 +366,7 @@ DEPENDENCIES
   omniauth-github
   omniauth-rails_csrf_protection
   oneshot_task_generator
-  pg (>= 0.18, < 2.0)
+  pg (~> 1.1)
   pry-byebug
   pry-rails
   puma (~> 5.0)
