@@ -4,7 +4,7 @@ git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 ruby "3.0.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem "rails", "6.1.4.1"
+gem "rails", "7.0.0.alpha2"
 # Use postgresql as the database for Active Record
 gem "pg", ">= 0.18", "< 2.0"
 # Use Puma as the app server
@@ -72,7 +72,8 @@ group :development do
   gem "flamegraph"
   gem "stackprof"
 
-  gem "bullet"
+  # Bullet does not support active_record 7.0.0.alpha2 yet
+  # gem "bullet"
 
   gem "rubocop"
   gem "rubocop-performance"
