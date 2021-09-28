@@ -72,7 +72,8 @@ group :development do
   gem "flamegraph"
   gem "stackprof"
 
-  gem "bullet"
+  # Bullet does not support active_record 7.0.0.alpha2 yet
+  # gem "bullet"
 
   gem "rubocop"
   gem "rubocop-performance"

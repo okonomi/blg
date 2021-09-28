@@ -76,8 +76,8 @@ Rails.application.configure do
 
   config.web_console.permissions = %w[0.0.0.0/0 ::/0]
 
-  config.after_initialize do
-    Bullet.enable = true
-    Bullet.alert = true
-  end
+#   config.after_initialize do
+#     Bullet.enable = true
+#     Bullet.alert = true
+#   end
 end
