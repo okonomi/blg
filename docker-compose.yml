@@ -14,12 +14,18 @@ services:
       - rails_tmp:/app/tmp
       - home:/root
     environment:
-      BUNDLE_PATH: /app/.bundle
-      BUNDLE_JOBS: 4
-      WEBPACKER_DEV_SERVER_HOST: webpacker
-      DATABASE_HOST: db
-      DATABASE_USERNAME: postgres
-      DATABASE_PASSWORD: postgres
+      - BUNDLE_PATH=/app/.bundle
+      - BUNDLE_JOBS=4
+      - WEBPACKER_DEV_SERVER_HOST=webpacker
+      - DATABASE_HOST=db
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=postgres
+      - BLOG_TITLE
+      - GITHUB_OAUTH_CLIENT_KEY
+      - GITHUB_OAUTH_CLIENT_SECRET
+      - GITHUB_USER
+      - TWITTER_ID
+      - GITHUB_ID
     command: /bin/sh -c "rm -f tmp/pids/server.pid && bin/rails s -p 3000 -b '0.0.0.0'"
     depends_on:
       - db
