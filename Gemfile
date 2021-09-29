@@ -69,8 +69,6 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 
-  gem "listen", "~> 3.3"
-
   gem "heavens_door"
 
   gem "flamegraph"

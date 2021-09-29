@@ -138,9 +138,6 @@ GEM
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     jwt (2.2.3)
-    listen (3.7.0)
-      rb-fsevent (~> 0.10, >= 0.10.3)
-      rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.12.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -236,9 +233,6 @@ GEM
       zeitwerk (~> 2.5.0.beta3)
     rainbow (3.0.0)
     rake (13.0.6)
-    rb-fsevent (0.11.0)
-    rb-inotify (0.10.1)
-      ffi (~> 1.0)
     regexp_parser (2.1.1)
     reline (0.2.7)
       io-console (~> 0.5)
@@ -354,7 +348,6 @@ DEPENDENCIES
   heavens_door
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
-  listen (~> 3.3)
   meta-tags
   newrelic_rpm
   omniauth
