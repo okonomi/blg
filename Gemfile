@@ -12,27 +12,29 @@ gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
-# Use SCSS for stylesheets
-gem "sass-rails", ">= 6"
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem "webpacker", "~> 5.0"
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-# gem "turbolinks", "~> 5"
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "jbuilder", "~> 2.7"
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
-# Use Active Storage variant
-gem "image_processing", "~> 1.2"
+# Build JSON APIs with ease [https://github.com/rails/jbuilder]
+gem "jbuilder", "~> 2.7"
+
+# Use Redis adapter to run Action Cable in production
+# gem "redis", "~> 4.0"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.4.4", require: false
+
+# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
+# gem "bcrypt", "~> 3.1.7"
+
+# Use SCSS for stylesheets
+gem "sass-rails", ">= 6"
+
+# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
+gem "image_processing", "~> 1.2"
 
 gem "pundit"
 
@@ -87,7 +89,7 @@ group :development do
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
+  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara", ">= 3.26"
   gem "selenium-webdriver"
   # Easy installation and use of web drivers to run system tests with browsers
