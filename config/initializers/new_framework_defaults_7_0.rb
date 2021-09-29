@@ -82,4 +82,4 @@
 # If you have configured the serializer elsewhere, you can remove this.
 #
 # See https://guides.rubyonrails.org/action_controller_overview.html#cookies for more information.
-# Rails.application.config.action_dispatch.cookies_serializer = :hybrid
+Rails.application.config.action_dispatch.cookies_serializer = :json
