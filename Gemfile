@@ -49,11 +49,8 @@ gem "meta-tags"
 gem "cloudinary"
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem "byebug", platforms: %i[mri mingw x64_mingw]
-
-  gem "pry-byebug"
-  gem "pry-rails"
+  # Start debugger with binding.b [https://github.com/ruby/debug]
+  gem "debug", ">= 1.0.0", platforms: %i[ mri mingw x64_mingw ]
 
   gem "rspec-rails"
 
