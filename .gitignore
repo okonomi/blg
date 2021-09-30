@@ -36,3 +36,6 @@ yarn-debug.log*
 
 .env
 Brewfile.lock.json
+
+/app/assets/builds/*
+!/app/assets/builds/.keep

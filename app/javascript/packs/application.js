@@ -13,10 +13,6 @@ Rails.start()
 // Turbolinks.start()
 ActiveStorage.start()
 
-import '@fortawesome/fontawesome-free/css/all.css'
-
-import '../src/stylesheets/application'
-
 import '../src/bulma-navbar'
 import '../src/bulma-notification'
 import '../src/trix'

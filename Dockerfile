@@ -24,6 +24,7 @@ RUN apk add --no-cache \
     chromium-chromedriver \
     postgresql-client \
     imagemagick
+RUN gem install foreman
 
 FROM base AS builder
 
