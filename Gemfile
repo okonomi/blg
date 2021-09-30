@@ -15,6 +15,9 @@ gem "puma", "~> 5.0"
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem "webpacker", "~> 5.0"
 
+# Bundle and process CSS [https://github.com/rails/cssbundling-rails]
+gem "cssbundling-rails", ">= 0.1.0"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder", "~> 2.7"
 
