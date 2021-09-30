@@ -26,7 +26,7 @@ services:
       - GITHUB_USER
       - TWITTER_ID
       - GITHUB_ID
-    command: /bin/sh -c "rm -f tmp/pids/server.pid && bin/rails s -p 3000 -b '0.0.0.0'"
+    command: bin/dev
     depends_on:
       - db
   webpacker:

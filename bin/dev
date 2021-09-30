@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
+rm -f tmp/pids/server.pid
+
 foreman start -f Procfile.dev
