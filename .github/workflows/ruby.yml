@@ -58,7 +58,9 @@ jobs:
           GITHUB_OAUTH_CLIENT_SECRET: xxx
           GITHUB_USER: github_user
       - name: Run tests
-        run: bundle exec rspec
+        run: |
+          bin/rails assets:precompile
+          bundle exec rspec
         env:
           BLOG_TITLE: Blg
           GITHUB_OAUTH_CLIENT_KEY: xxx
