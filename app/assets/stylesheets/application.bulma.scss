@@ -25,6 +25,10 @@
 // $input-border-color: transparent;
 // $input-shadow: none;
 
+$text: hsl(243, 100, 1);
+$body-background-color: #fefefe;
+$family-sans-serif: "Noto Sans JP", "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
+
 // Import only what you need from Bulma
 // @import "bulma/sass/utilities/_all.sass";
 // @import "bulma/sass/base/_all.sass";
@@ -37,3 +41,22 @@
 // @import "bulma/sass/layout/section.sass";
 
 @import 'bulma/bulma';
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+body {
+  font-kerning: auto;
+}
+
+.section.is-text-wrapped {
+  overflow-wrap: break-word;
+}
+
+.image.is-radius {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.heavens-door-custom {
+  top: inherit !important;
+  bottom: 10px;
+}
