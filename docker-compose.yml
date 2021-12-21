@@ -27,6 +27,7 @@ services:
       - TWITTER_ID
       - GITHUB_ID
     command: bin/dev
+    tty: true
     depends_on:
       - db
   webpacker:
