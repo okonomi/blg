@@ -44,6 +44,7 @@ $family-sans-serif: "Noto Sans JP", "游ゴシック Medium", YuGothic, YuGothic
 @import '@fortawesome/fontawesome-free/css/all.css';
 @import 'actiontext.css';
 @import 'trix-toolbar';
+@import 'highlight.js/styles/default.css';
 
 body {
   font-kerning: auto;
