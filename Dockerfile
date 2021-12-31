@@ -32,10 +32,7 @@ ENV BUNDLE_FROZEN true
 ENV BUNDLE_WITHOUT development test
 
 ENV RAILS_ENV production
-ARG GITHUB_OAUTH_CLIENT_KEY
-ARG GITHUB_OAUTH_CLIENT_SECRET
-ARG SECRET_KEY_BASE
-ARG OMNIAUTH_FULL_HOST
+ENV SECRET_KEY_BASE xxx
 
 WORKDIR /app
 
@@ -52,9 +49,6 @@ RUN yarn install --frozen-lockfile
 # compile assets
 COPY Rakefile .
 COPY bin bin
-COPY .browserslistrc .
-COPY postcss.config.js .
-COPY babel.config.js .
 COPY config config
 COPY app/assets app/assets
 COPY app/javascript app/javascript
@@ -69,7 +63,6 @@ ENV RAILS_SERVE_STATIC_FILES 1
 
 WORKDIR /app
 
-RUN gem update --system
 RUN apk add --no-cache \
     curl \
     postgresql-libs \
@@ -78,5 +71,4 @@ RUN apk add --no-cache \
 
 COPY --from=builder /usr/local/bundle /usr/local/bundle
 COPY --from=builder /app/public/assets /app/public/assets
-COPY --from=builder /app/public/packs /app/public/packs
 COPY . .

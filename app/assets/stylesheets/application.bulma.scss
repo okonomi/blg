@@ -40,10 +40,15 @@ $family-sans-serif: "Noto Sans JP", "游ゴシック Medium", YuGothic, YuGothic
 // @import "bulma/sass/layout/hero.sass";
 // @import "bulma/sass/layout/section.sass";
 
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+
 @import 'bulma/bulma';
-@import '@fortawesome/fontawesome-free/css/all.css';
-@import 'actiontext';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import 'actiontext.css';
 @import 'trix-toolbar';
+@import 'highlight.js/styles/default';
 
 body {
   font-kerning: auto;

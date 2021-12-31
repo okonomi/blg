@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  web: &app_base
+  web:
     build:
       context: .
       target: development
@@ -27,13 +27,9 @@ services:
       - TWITTER_ID
       - GITHUB_ID
     command: bin/dev
+    tty: true
     depends_on:
       - db
-  webpacker:
-    <<: *app_base
-    ports:
-      - "3035:3035"
-    command: bin/webpack-dev-server
   db:
     image: postgres:11
     ports:
