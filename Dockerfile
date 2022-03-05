@@ -1,4 +1,4 @@
-FROM ruby:3.0.3-alpine3.15 AS base
+FROM ruby:3.1.1-alpine3.15 AS base
 
 ENV TZ=Asia/Tokyo
 
@@ -57,7 +57,7 @@ COPY app/javascript app/javascript
 RUN bin/rails assets:precompile
 
 
-FROM ruby:3.0.3-alpine3.15 AS production
+FROM ruby:3.1.1-alpine3.15 AS production
 
 ENV BUNDLE_FORCE_RUBY_PLATFORM true
 
