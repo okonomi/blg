@@ -15,6 +15,8 @@ RUN apk add --no-cache \
 
 FROM base AS development
 
+ENV BUNDLE_FORCE_RUBY_PLATFORM true
+
 WORKDIR /app
 
 RUN apk add --no-cache \
@@ -29,6 +31,7 @@ FROM base AS builder
 
 ENV BUNDLE_FROZEN true
 ENV BUNDLE_WITHOUT development test
+ENV BUNDLE_FORCE_RUBY_PLATFORM true
 
 ENV RAILS_ENV production
 ENV SECRET_KEY_BASE xxx
@@ -55,6 +58,8 @@ RUN bin/rails assets:precompile
 
 
 FROM ruby:3.0.3-alpine3.15 AS production
+
+ENV BUNDLE_FORCE_RUBY_PLATFORM true
 
 ENV RAILS_ENV production
 ENV RAILS_LOG_TO_STDOUT 1
