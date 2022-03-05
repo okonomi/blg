@@ -142,7 +142,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    jsbundling-rails (1.0.0)
+    jsbundling-rails (1.0.2)
       railties (>= 6.0.0)
     jwt (2.2.3)
     loofah (2.14.0)
