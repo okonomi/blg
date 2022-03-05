@@ -4,7 +4,6 @@ ENV TZ=Asia/Tokyo
 
 WORKDIR /app
 
-RUN gem update --system
 RUN apk add --no-cache \
     git \
     build-base \
