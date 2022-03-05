@@ -1,4 +1,4 @@
-FROM ruby:3.0.3-alpine3.13 AS base
+FROM ruby:3.0.3-alpine3.15 AS base
 
 ENV TZ=Asia/Tokyo
 
@@ -54,7 +54,7 @@ COPY app/javascript app/javascript
 RUN bin/rails assets:precompile
 
 
-FROM ruby:3.0.3-alpine3.13 AS production
+FROM ruby:3.0.3-alpine3.15 AS production
 
 ENV RAILS_ENV production
 ENV RAILS_LOG_TO_STDOUT 1
