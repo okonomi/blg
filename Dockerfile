@@ -27,15 +27,15 @@ FROM base AS development
 
 # ENV BUNDLE_FORCE_RUBY_PLATFORM true
 
-# WORKDIR /app
+WORKDIR /app
 
 # RUN apk add --no-cache \
 #     less \
 #     chromium \
 #     chromium-chromedriver \
-#     postgresql-client \
 #     imagemagick
-# RUN gem install foreman
+RUN gem install foreman
+
 
 FROM base AS builder
 
