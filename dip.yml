@@ -5,9 +5,9 @@ compose:
     - docker-compose.yml
 
 interaction:
-  sh:
+  shell:
     service: web
-    command: /bin/sh
+    command: /bin/bash
 
   rails:
     service: web
