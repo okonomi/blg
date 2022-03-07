@@ -12,6 +12,7 @@ FROM ruby:3.1.1-slim-bullseye AS base
 #     yarn \
 #     bash
 
+RUN apt update && apt install -y build-essential libpq-dev
 
 FROM base AS development
 
@@ -29,19 +30,18 @@ FROM base AS development
 
 FROM base AS builder
 
-# ENV BUNDLE_FROZEN true
-# ENV BUNDLE_WITHOUT development test
-# ENV BUNDLE_FORCE_RUBY_PLATFORM true
+ENV BUNDLE_FROZEN true
+ENV BUNDLE_WITHOUT development test
 
 # ENV RAILS_ENV production
 # ENV SECRET_KEY_BASE xxx
 
-# WORKDIR /app
+WORKDIR /app
 
-# # install gems
-# COPY Gemfile .
-# COPY Gemfile.lock .
-# RUN bundle install --jobs 4
+# install gems
+COPY Gemfile .
+COPY Gemfile.lock .
+RUN bundle install --jobs 4
 
 # # install npm packages
 # COPY package.json .
@@ -67,7 +67,7 @@ FROM ruby:3.1.1-slim-bullseye AS production
 # ENV RAILS_LOG_TO_STDOUT 1
 # ENV RAILS_SERVE_STATIC_FILES 1
 
-# WORKDIR /app
+WORKDIR /app
 
 # RUN apk add --no-cache \
 #     curl \
@@ -75,6 +75,6 @@ FROM ruby:3.1.1-slim-bullseye AS production
 #     tzdata \
 #     imagemagick
 
-# COPY --from=builder /usr/local/bundle /usr/local/bundle
+COPY --from=builder /usr/local/bundle /usr/local/bundle
 # COPY --from=builder /app/public/assets /app/public/assets
 # COPY . .
