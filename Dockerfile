@@ -84,7 +84,7 @@ WORKDIR /app
 #     imagemagick
 RUN apt update && apt install -y --no-install-recommends \
     curl \
-    postgresql-libs
+    libpq5
 
 COPY --from=builder /usr/local/bundle /usr/local/bundle
 COPY --from=builder /app/public/assets /app/public/assets
