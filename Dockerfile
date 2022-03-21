@@ -83,7 +83,7 @@ WORKDIR /app
 #     postgresql-libs \
 #     tzdata \
 #     imagemagick
-RUN apk update && apk install -y --no-install-reccomends \
+RUN apk update && apk install -y --no-install-recommends \
     curl
 
 COPY --from=builder /usr/local/bundle /usr/local/bundle
