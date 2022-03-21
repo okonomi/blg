@@ -83,7 +83,8 @@ WORKDIR /app
 #     tzdata \
 #     imagemagick
 RUN apt update && apt install -y --no-install-recommends \
-    curl
+    curl \
+    postgresql-libs
 
 COPY --from=builder /usr/local/bundle /usr/local/bundle
 COPY --from=builder /app/public/assets /app/public/assets
