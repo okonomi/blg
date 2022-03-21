@@ -2,12 +2,7 @@ FROM ruby:3.1.1-slim-bullseye AS base
 
 # RUN apk add --no-cache \
 #     git \
-#     build-base \
-#     postgresql-dev \
 #     tzdata \
-#     yarn \
-#     bash
-
 RUN apt update && apt install -y \
     build-essential \
     libpq-dev \
@@ -72,8 +67,6 @@ ENV RAILS_SERVE_STATIC_FILES 1
 WORKDIR /app
 
 # RUN apk add --no-cache \
-#     curl \
-#     postgresql-libs \
 #     tzdata \
 #     imagemagick
 RUN apt update && apt install -y --no-install-recommends \
