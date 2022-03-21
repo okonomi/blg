@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-rm tmp/pids/server.pid
+rm -f tmp/pids/server.pid
 
 if ! command -v foreman &> /dev/null
 then
