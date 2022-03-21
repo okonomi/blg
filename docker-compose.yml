@@ -15,6 +15,7 @@ services:
       - rails_tmp:/app/tmp
       - home:/root
     environment:
+      - TZ=Asia/Tokyo
       - BUNDLE_PATH=/app/.bundle
       - BUNDLE_JOBS=4
       - WEBPACKER_DEV_SERVER_HOST=webpacker

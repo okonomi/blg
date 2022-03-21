@@ -1,9 +1,5 @@
 FROM ruby:3.1.1-slim-bullseye AS base
 
-# ENV TZ=Asia/Tokyo
-
-# WORKDIR /app
-
 # RUN apk add --no-cache \
 #     git \
 #     build-base \
@@ -24,8 +20,6 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 
 
 FROM base AS development
-
-# ENV BUNDLE_FORCE_RUBY_PLATFORM true
 
 WORKDIR /app
 
