@@ -88,4 +88,4 @@ RUN apt update && apt install -y --no-install-recommends \
 
 COPY --from=builder /usr/local/bundle /usr/local/bundle
 COPY --from=builder /app/public/assets /app/public/assets
-# COPY . .
+COPY . .
