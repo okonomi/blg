@@ -21,8 +21,9 @@ WORKDIR /app
 # RUN apk add --no-cache \
 #     less \
 #     chromium \
-#     chromium-chromedriver \
-#     imagemagick
+#     chromium-chromedriver
+RUN apt update && apt install -y --no-install-recommends \
+    imagemagick
 RUN gem install foreman
 
 
@@ -71,7 +72,8 @@ WORKDIR /app
 #     imagemagick
 RUN apt update && apt install -y --no-install-recommends \
     curl \
-    libpq5
+    libpq5 \
+    imagemagick
 
 COPY --from=builder /usr/local/bundle /usr/local/bundle
 COPY --from=builder /app/public/assets /app/public/assets
