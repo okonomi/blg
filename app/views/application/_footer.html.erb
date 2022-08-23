@@ -1,0 +1,20 @@
+<footer class="footer">
+  <div class="content has-text-centered">
+    <% if ENV.key?('TWITTER_ID') %>
+      <%= link_to "https://twitter.com/#{ENV.fetch('TWITTER_ID')}" do %>
+        <span class="fa-stack fa-2x">
+          <span class="fas fa-circle fa-stack-2x" style="color: #1da1f2;"></span>
+          <span class="fab fa-twitter fa-stack-1x fa-inverse"></span>
+        </span>
+      <% end %>
+    <% end %>
+    <% if ENV.key?('GITHUB_ID') %>
+      <%= link_to "https://github.com/#{ENV.fetch('GITHUB_ID')}" do %>
+        <span class="fa-stack fa-2x">
+          <span class="fas fa-circle fa-stack-2x" style="color: #333;"></span>
+          <span class="fab fa-github-alt fa-stack-1x fa-inverse"></span>
+        </span>
+      <% end %>
+    <% end %>
+  </div>
+</footer>
