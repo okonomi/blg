@@ -1,8 +1,0 @@
-test:
-  adapter: postgresql
-  encoding: unicode
-  database: blg_test
-  pool: 20
-  username: postgres
-  password: postgres
-  host: localhost
