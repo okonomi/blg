@@ -1,3 +1,7 @@
 <p><%= link_to post.title, post_path(post) %></p>
 
+<%= link_to edit_post_path(post) do %>
+  Edit
+<% end %>
+
 <p><%= post.content %></p>
