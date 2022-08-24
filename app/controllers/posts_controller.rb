@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # after_action :verify_authorized
 
   def index
-    @posts = authorize Post.includes(:rich_text_content).published.latest
+    @posts = authorize Post.includes(:tags, :rich_text_content).published.latest
 
     respond_to do |format|
       format.html
@@ -48,6 +48,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :content, :published_at, :status)
+      params.require(:post).permit(:title, :content, :published_at, :status, tag_ids: [])
     end
 end
