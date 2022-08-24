@@ -8,8 +8,7 @@
         <%= ENV.fetch('BLOG_TITLE') %>
       </span>
     <% end %>
-    <%# if policy(Post).draft? %>
-    <% if false %>
+    <% if policy(Post).draft? %>
       <div class="navbar-item is-hidden-desktop">
         <%= link_to posts_drafts_path, class: "button" do %>
           <span class="icon">
@@ -18,8 +17,7 @@
         <% end %>
       </div>
     <% end %>
-    <%# if policy(Post).new? && !current_page?(new_post_path) %>
-    <% if false %>
+    <% if policy(Post).new? && !current_page?(new_post_path) %>
       <div class="navbar-item is-hidden-desktop">
         <%= link_to new_post_path, class: "button is-primary" do %>
           <span class="icon">
@@ -28,8 +26,7 @@
         <% end%>
       </div>
     <% end %>
-    <%# if logged_in? %>
-    <% if false %>
+    <% if logged_in? %>
       <div class="navbar-item is-hidden-desktop">
         <%= link_to logout_path, method: :delete, class: "button is-light" do %>
           <span class="icon">
@@ -42,13 +39,13 @@
 
   <div class="navbar-menu">
     <div class="navbar-start">
-      <%#= link_to "Drafts", posts_drafts_path, class: "navbar-item" if policy(Post).draft? %>
+      <%= link_to "Drafts", posts_drafts_path, class: "navbar-item" if policy(Post).draft? %>
     </div>
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <%#= link_to "New Post", new_post_path, class: "button is-primary" if policy(Post).new? && !current_page?(new_post_path) %>
-          <%#= link_to "Logout", logout_path, method: :delete, class: "button is-light" if logged_in? %>
+          <%= link_to "New Post", new_post_path, class: "button is-primary" if policy(Post).new? && !current_page?(new_post_path) %>
+          <%= link_to "Logout", logout_path, method: :delete, class: "button is-light" if logged_in? %>
         </div>
       </div>
     </div>
