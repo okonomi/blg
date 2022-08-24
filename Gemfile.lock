@@ -185,6 +185,8 @@ GEM
       activesupport (>= 3.0.0)
     racc (1.6.0)
     rack (2.2.4)
+    rack-mini-profiler (3.0.0)
+      rack (>= 1.2.0)
     rack-protection (2.2.2)
       rack
     rack-test (2.0.2)
@@ -299,6 +301,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   pundit
+  rack-mini-profiler
   rails (= 7.0.3.1)
   rspec-rails
   selenium-webdriver
