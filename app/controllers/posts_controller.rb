@@ -35,6 +35,12 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    if @post.delete
+      redirect_to root_path, notice: t("flash.post_destroyed")
+    end
+  end
+
   private
 
     def set_post

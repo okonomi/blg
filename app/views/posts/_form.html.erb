@@ -38,11 +38,9 @@
       <div class="level-left">
         <%= f.submit class: 'button is-link' %>
       </div>
-      <% if false %>
       <div class="level-right">
         <%= link_to 'Delete', post_path(post), method: :delete, class: 'button is-danger' if post.persisted? && policy(post).destroy? %>
       </div>
-      <% end %>
     </div>
   <% end %>
 </section>
