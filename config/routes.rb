@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :drafts, only: :index
   end
   resources :posts, param: :uid
+  resources :tags, only: :show
   direct(:login) { "/auth/github?origin=#{request.original_url}" }
 
   root "posts#index"

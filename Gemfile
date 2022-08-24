@@ -51,6 +51,8 @@ gem "omniauth"
 gem "omniauth-github"
 gem "omniauth-rails_csrf_protection"
 
+gem "active_decorator"
+
 gem "meta-tags"
 
 group :development, :test do
