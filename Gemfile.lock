@@ -179,6 +179,8 @@ GEM
     omniauth-rails_csrf_protection (1.0.1)
       actionpack (>= 4.2)
       omniauth (~> 2.0)
+    oneshot_task_generator (0.2.0)
+      rails (>= 3.0.0)
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
@@ -329,6 +331,7 @@ DEPENDENCIES
   omniauth
   omniauth-github
   omniauth-rails_csrf_protection
+  oneshot_task_generator
   pg (~> 1.1)
   puma (~> 5.0)
   pundit
