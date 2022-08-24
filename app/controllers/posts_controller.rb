@@ -1,8 +1,26 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
+  # after_action :verify_authorized
 
   def index
-    @posts = Post.all
+    @posts = authorize Post.includes(:rich_text_content).published.latest
+
+    respond_to do |format|
+      format.html
+      format.atom
+    end
+  end
+
+  def new
+    @post = authorize Post.new(published_at: Time.current)
+  end
+
+  def create
+    authorize Post
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to @post, notice: t("flash.post_created")
+    end
   end
 
   def show
