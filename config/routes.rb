@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "/auth/github/callback" => "sessions#create"
+
   resource :auth, only: :show
 
   resources :posts, param: :uid
