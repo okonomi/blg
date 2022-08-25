@@ -14,15 +14,3 @@ Setup:
 Run:
 
 - `$ bin/rails s`
-
-## Docker
-
-Setup:
-
-- `$ cp .env.example .env`
-- `$ docker-compose build`
-- `$ docker-compose run --rm web bin/setup`
-
-Run:
-
-- `$ docker-compose up -d`
