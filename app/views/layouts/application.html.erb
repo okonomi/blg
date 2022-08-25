@@ -2,7 +2,7 @@
 <html prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= display_meta_tags site: ENV.fetch("BLOG_TITLE"),
                           description: ENV.fetch("BLOG_TITLE"),
                           reverse: true,
@@ -21,8 +21,8 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Noto+Sans+JP', media: 'all' %>
-    <%= javascript_include_tag "application" %>
     <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
 
     <%= auto_discovery_link_tag :atom, feed_url, title: 'Atom' %>
   </head>
