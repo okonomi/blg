@@ -1,0 +1,45 @@
+{
+  "name": "Blg",
+  "description": "\"Blg\" is tiny blog made with Rails.",
+  "repository": "https://github.com/okonomi/blg",
+  "addons": [
+    "heroku-postgresql",
+    "cloudinary"
+  ],
+  "buildpacks": [],
+  "env": {
+    "BLOG_TITLE": {
+      "description": "Blog title",
+      "required": true
+    },
+    "GITHUB_OAUTH_CLIENT_KEY": {
+      "description": "GitHub OAuth Client Key",
+      "required": true
+    },
+    "GITHUB_OAUTH_CLIENT_SECRET": {
+      "description": "GitHub OAuth Client Secret",
+      "required": true
+    },
+    "GITHUB_USER": {
+      "description": "Allow login Github user ID",
+      "required": true
+    },
+    "TWITTER_ID": {
+      "description": "Own Twitter ID"
+    },
+    "GITHUB_ID": {
+      "description": "Own Github ID"
+    },
+    "SECRET_KEY_BASE": {
+      "description": "for Rails config value"
+    },
+    "OMNIAUTH_FULL_HOST": {
+      "description": "OmniAuth.config.full_host value"
+    },
+    "CLOUDINARY_URL": {
+      "description": "Cloudinary credentials"
+    }
+  },
+  "formation": {},
+  "scripts": {}
+}
