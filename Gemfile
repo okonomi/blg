@@ -53,6 +53,8 @@ gem "omniauth-rails_csrf_protection"
 
 gem "active_decorator"
 
+gem "newrelic_rpm"
+
 gem "meta-tags"
 
 group :development, :test do

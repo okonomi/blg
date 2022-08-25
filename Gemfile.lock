@@ -158,6 +158,7 @@ GEM
       digest
       net-protocol
       timeout
+    newrelic_rpm (8.10.0)
     nio4r (2.5.8)
     nokogiri (1.13.8-arm64-darwin)
       racc (~> 1.4)
@@ -336,6 +337,7 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   meta-tags
+  newrelic_rpm
   omniauth
   omniauth-github
   omniauth-rails_csrf_protection
