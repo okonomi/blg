@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
-  # after_action :verify_authorized
+  after_action :verify_authorized
 
   def index
     @posts = authorize Post.includes(:tags, :rich_text_content).published.latest
