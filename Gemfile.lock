@@ -109,9 +109,11 @@ GEM
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.0)
     ffi (1.15.5)
+    flamegraph (0.9.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
+    heavens_door (0.3.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -289,6 +291,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    stackprof (0.2.21)
     strscan (3.0.4)
     thor (1.2.1)
     timeout (0.3.0)
@@ -324,6 +327,8 @@ DEPENDENCIES
   debug
   dotenv-rails
   factory_bot_rails
+  flamegraph
+  heavens_door
   image_processing (~> 1.2)
   jbuilder
   jsbundling-rails
@@ -345,6 +350,7 @@ DEPENDENCIES
   rubocop-rspec
   selenium-webdriver
   sprockets-rails
+  stackprof
   tzinfo-data
   web-console
   webdrivers
