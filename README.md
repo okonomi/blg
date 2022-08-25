@@ -1,24 +1,16 @@
-# README
+# Blg
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+"Blg" is tiny blog made with Rails.
 
-Things you may want to cover:
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-* Ruby version
+## Local
 
-* System dependencies
+Setup:
 
-* Configuration
+- `$ cp .env.example .env`
+- `$ bin/setup`
 
-* Database creation
+Run:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- `$ bin/rails s`
