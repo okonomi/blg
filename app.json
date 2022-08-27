@@ -6,7 +6,14 @@
     "heroku-postgresql",
     "cloudinary"
   ],
-  "buildpacks": [],
+  "buildpacks": [
+    {
+      "url": "heroku-community/apt"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
   "env": {
     "BLOG_TITLE": {
       "description": "Blog title",
