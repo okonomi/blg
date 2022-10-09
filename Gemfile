@@ -92,6 +92,8 @@ group :development do
   gem "rubocop-rspec"
 
   gem "oneshot_task_generator"
+
+  gem "reverse_markdown", require: false
 end
 
 group :test do
