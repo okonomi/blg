@@ -3,12 +3,25 @@
 namespace :oneshot do
   desc ""
   task "20221009_export_blog_post": :environment do
-    require "reverse_markdown"
+    require "erb"
     require "fileutils"
+    require "reverse_markdown"
 
     FileUtils.mkdir_p Rails.root.join("tmp/transfer/posts")
 
-    Post.includes(:rich_text_content).published.find_each do |post|
+    front_matter = ERB.new(<<~ERB, trim_mode: "<>")
+      layout: "../../layouts/BlogPost.astro"
+      title: "<%= (post.title.presence || "no title").gsub('"', '\"') %>"
+      pubDate: "<%= post.published_date %>"
+      <% if post.tags.count > 0 %>
+      tags:
+      <% post.tags.each do |tag| %>
+        - <%= tag.name %>
+      <% end %>
+      <% end %>
+    ERB
+
+    Post.includes(:tags, :rich_text_content).published.find_each do |post|
       post = ActiveDecorator::Decorator.instance.decorate(post)
 
       # 記事本文取得
@@ -26,9 +39,7 @@ namespace :oneshot do
       File.open(path, "w") do |f|
         f.write(<<~"FRONTMATTER")
           ---
-          layout: "../../layouts/BlogPost.astro"
-          title: "#{(post.title.presence || "no title").gsub('"', '\"')}"
-          pubDate: "#{post.published_date}"
+          #{front_matter.result_with_hash({ post: post }).chomp("")}
           ---
         FRONTMATTER
 
