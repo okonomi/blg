@@ -11,7 +11,7 @@ namespace :oneshot do
 
     front_matter = ERB.new(<<~ERB, trim_mode: "<>")
       layout: "../../layouts/BlogPost.astro"
-      title: "<%= (post.title.presence || "no title").gsub('"', '\"') %>"
+      title: "<%= (post.title.presence || "no title").gsub('"', '\\"') %>"
       pubDate: "<%= post.published_date %>"
       <% if post.tags.count > 0 %>
       tags:
